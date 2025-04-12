@@ -86,7 +86,7 @@ const FloatingContact = () => {
           <div className="absolute -inset-0.5 bg-gradient-to-r from-[#1E0B9B] to-[#07CCEC] rounded-full blur-sm opacity-75" />
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="relative w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 bg-gradient-to-r from-[#1E0B9B] to-[#07CCEC]"
+            className="relative w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 bg-gradient-to-r from-blue-400 to-teal-400"
           >
             <div
               className={`text-white transform transition-transform duration-300 ${

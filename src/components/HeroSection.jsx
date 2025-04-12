@@ -41,7 +41,7 @@ const HeroSection = () => {
           <div className="w-full lg:w-1/2 mt-12 lg:mt-0 relative">
             <div className="relative w-full aspect-[4/3]">
               <Image
-                src="/images/logo.png" 
+                src="/images/hero.webp" 
                 alt="Child playing with blocks during therapy session"
                 fill
                 className="rounded-3xl object-cover"
