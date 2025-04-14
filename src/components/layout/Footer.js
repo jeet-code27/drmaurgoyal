@@ -57,23 +57,15 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-green-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
+                <Link href="/about-us" className="text-gray-300 hover:text-green-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
                   <span className="mr-2 text-green-400 group-hover:scale-125 transition-transform duration-300">•</span> About Us
                 </Link>
               </li>
+             
+             
               <li>
-                <Link href="/programs" className="text-gray-300 hover:text-teal-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
-                  <span className="mr-2 text-teal-400 group-hover:scale-125 transition-transform duration-300">•</span> Our Programs
-                </Link>
-              </li>
-              <li>
-                <Link href="/gallery" className="text-gray-300 hover:text-teal-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
-                  <span className="mr-2 text-teal-400 group-hover:scale-125 transition-transform duration-300">•</span> Gallery
-                </Link>
-              </li>
-              <li>
-                <Link href="/enrollment" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
-                  <span className="mr-2 text-emerald-400 group-hover:scale-125 transition-transform duration-300">•</span> Enrollment
+                <Link href="/services" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
+                  <span className="mr-2 text-emerald-400 group-hover:scale-125 transition-transform duration-300">•</span> Services
                 </Link>
               </li>
               <li>

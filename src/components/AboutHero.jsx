@@ -3,49 +3,46 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-const PediatricServices = () => {
+const AboutHero = () => {
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
+    visible: { 
       opacity: 1,
-      transition: {
+      transition: { 
         staggerChildren: 0.2,
         delayChildren: 0.3,
       }
     }
   };
-
+  
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
       y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
+      transition: { 
+        duration: 0.6,
         ease: "easeOut"
       }
     }
   };
 
   const buttonVariants = {
-    hover: {
+    hover: { 
       scale: 1.05,
-      transition: {
-        duration: 0.2
-      }
+      boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.1)",
+      transition: { duration: 0.3 }
     },
-    tap: {
-      scale: 0.95
-    }
+    tap: { scale: 0.98 }
   };
 
   const imageVariants = {
-    hidden: { opacity: 0, x: 50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
+    hidden: { opacity: 0, scale: 1.05 },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      transition: { 
         duration: 0.8,
         ease: "easeOut"
       }
@@ -57,7 +54,7 @@ const PediatricServices = () => {
       <div className="flex flex-col lg:flex-row">
         {/* Left Content with padding */}
         <motion.div 
-          className="w-full lg:w-1/2 px-8 md:px-16 lg:px-24 py-16 flex flex-col justify-center"
+          className="w-full lg:w-1/2 px-8 md:px-16 lg:px-24 py-16 md:py-28 flex flex-col justify-center"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
@@ -66,22 +63,23 @@ const PediatricServices = () => {
             className="uppercase text-gray-700 text-xl font-bold tracking-wider mb-4"
             variants={itemVariants}
           >
-            SERVICES
+            About us
           </motion.h2>
+          
           <motion.h1 
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight"
             variants={itemVariants}
           >
-            Exceptional therapeutic services for exceptional children
+            We empower children and families in Ajmer
           </motion.h1>
+          
           <motion.p 
             className="text-gray-600 mb-8"
             variants={itemVariants}
           >
-            Mayur Child Care Center provides center-based pediatric therapy services including
-            Applied Behavior Analysis (ABA), Pediatric Speech Therapy, Pediatric
-            Occupational Therapy (OT), and Pediatric Physical Therapy (PT) at Ajmer.
+            At the core of our success is a magical team: team members are experts in their fields and deeply dedicated to the success of each and every child.
           </motion.p>
+          
           <motion.div 
             className="flex flex-wrap gap-4"
             variants={itemVariants}
@@ -92,12 +90,13 @@ const PediatricServices = () => {
               whileTap="tap"
             >
               <Link 
-                href="/request-visit"
+                href="/services"
                 className="inline-block px-8 py-3 bg-gray-800 text-white font-medium rounded-full hover:bg-gray-700 transition-colors"
               >
-                Request a visit
+                View Services
               </Link>
             </motion.div>
+            
             <motion.div
               variants={buttonVariants}
               whileHover="hover"
@@ -115,20 +114,27 @@ const PediatricServices = () => {
         
         {/* Right Image that touches the right edge */}
         <motion.div 
-          className="w-full lg:w-1/2 h-96 lg:h-auto"
+          className="w-full lg:w-1/2 h-96 md:h-98 lg:h-auto"
           initial="hidden"
           animate="visible"
           variants={imageVariants}
         >
-          <div className="relative w-full h-full">
-            <Image
-              src="/images/therapy-session.webp" 
-              alt="Therapist working with a child on developmental activities"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              priority
-            />
+          <div className="relative w-full h-full overflow-hidden">
+            <motion.div
+              initial={{ scale: 1 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 1.2 }}
+              className="w-full h-full"
+            >
+              <Image
+                src="/images/therapy-session.webp" 
+                alt="Therapist working with a child on developmental activities"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+            </motion.div>
           </div>
         </motion.div>
       </div>
@@ -136,4 +142,4 @@ const PediatricServices = () => {
   );
 };
 
-export default PediatricServices;
+export default AboutHero;

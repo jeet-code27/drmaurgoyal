@@ -51,24 +51,24 @@ const FAQSection = () => {
     },
     {
       question: "What are your operating hours?",
-      answer: "Mayur Child Care Center is open Monday through Friday from 7:00 AM to 6:30 PM. We're closed on major holidays, and our full holiday schedule is provided during enrollment."
-    },
-    {
-      question: "What curriculum do you follow?",
-      answer: "We follow a play-based, developmentally appropriate curriculum that incorporates elements from multiple educational philosophies including Montessori, Reggio Emilia, and traditional approaches. Our program focuses on the whole child, nurturing social, emotional, physical, and cognitive development."
-    },
-    {
-      question: "What meals do you provide?",
-      answer: "We provide nutritious breakfast, lunch, and two snacks daily. Our meals are prepared fresh on-site and meet all nutritional guidelines for growing children. We accommodate food allergies and special dietary requirements with proper documentation."
-    },
+      answer: "Mayur Child Care Center operates Monday through Saturday in two sessions: 9:00 AM to 10:00 AM and 5:00 PM to 8:00 PM. On Sundays, we’re open from 11:00 AM to 1:00 PM."
+    },    
+    // {
+    //   question: "What curriculum do you follow?",
+    //   answer: "We follow a play-based, developmentally appropriate curriculum that incorporates elements from multiple educational philosophies including Montessori, Reggio Emilia, and traditional approaches. Our program focuses on the whole child, nurturing social, emotional, physical, and cognitive development."
+    // },
+    // {
+    //   question: "What meals do you provide?",
+    //   answer: "We provide nutritious breakfast, lunch, and two snacks daily. Our meals are prepared fresh on-site and meet all nutritional guidelines for growing children. We accommodate food allergies and special dietary requirements with proper documentation."
+    // },
     {
       question: "What is your staff-to-child ratio?",
       answer: "We maintain low staff-to-child ratios to ensure quality care and individual attention. Our ratios are: 1:4 for infants, 1:6 for toddlers, and 1:8 for preschoolers, which exceeds many state requirements."
     },
-    {
-      question: "Do you offer part-time enrollment options?",
-      answer: "Yes, we offer both full-time and part-time enrollment options to accommodate diverse family needs. Part-time options include 2-day or 3-day schedules, subject to availability."
-    },
+    // {
+    //   question: "Do you offer part-time enrollment options?",
+    //   answer: "Yes, we offer both full-time and part-time enrollment options to accommodate diverse family needs. Part-time options include 2-day or 3-day schedules, subject to availability."
+    // },
     {
       question: "What safety measures do you have in place?",
       answer: "Safety is our top priority at Mayur Child Care Center. We have secure entry systems, regular safety drills, comprehensive background checks for all staff, CPR and First Aid certified teachers, camera monitoring systems, and strict pick-up authorization policies to ensure your child's safety."

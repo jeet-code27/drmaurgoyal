@@ -10,7 +10,6 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const navbarRef = useRef(null);
-  const dropdownRef = useRef(null);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -44,21 +43,15 @@ const Navbar = () => {
     setActiveDropdown(activeDropdown === index ? null : index);
   };
 
-  // Menu data structure - Services no longer has dropdownItems
+  // Menu data structure
   const menuItems = [
     {
-      title: "Plan your visit",
-      href: "/plan",
-      dropdownItems: [
-        { title: "What to expect", description: "Learn about our approach to pediatric therapy", href: "/plan/expect" },
-        { title: "Find a location", description: "Easily locate our nearest therapy center", href: "/plan/locations" },
-        { title: "Parent stories", description: "Read stories from families who have partnered with us", href: "/plan/stories" }
-      ]
+      title: "Home",
+      href: "/",
     },
     {
       title: "Services",
       href: "/services",
-      // No dropdown items for Services
     },
     {
       title: "Resources",
@@ -70,12 +63,7 @@ const Navbar = () => {
     },
     {
       title: "About",
-      href: "/about",
-      dropdownItems: [
-        { title: "Our Story", description: "Learn about our history and mission", href: "/about/story" },
-        { title: "Team", description: "Meet our dedicated therapists", href: "/about/team" },
-        { title: "Careers", description: "Join our growing team", href: "/about/careers" }
-      ]
+      href: "/about-us",
     }
   ];
 
@@ -85,12 +73,12 @@ const Navbar = () => {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.3 }
+      transition: { duration: 0.2 }
     },
     exit: { 
       opacity: 0, 
       y: -10,
-      transition: { duration: 0.2 }
+      transition: { duration: 0.15 }
     }
   };
 
@@ -98,12 +86,12 @@ const Navbar = () => {
     closed: { 
       opacity: 0, 
       height: 0,
-      transition: { duration: 0.3 }
+      transition: { duration: 0.2 }
     },
     open: { 
       opacity: 1, 
       height: 'auto',
-      transition: { duration: 0.3 }
+      transition: { duration: 0.2 }
     }
   };
 
@@ -112,74 +100,99 @@ const Navbar = () => {
       {/* Responsive header */}
       <nav ref={navbarRef} className="bg-gradient-to-r from-blue-50 to-teal-50 shadow-lg w-full sticky top-0 z-50 border-b-2 border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-20 md:h-24">
-            {/* Responsive logo */}
-            <div className="flex-shrink-0 flex items-center space-x-2 md:space-x-3">
+          <div className="flex justify-between h-16 md:h-20">
+            {/* Logo */}
+            <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="flex items-center">
-                <div className="h-14 w-14 md:h-20 md:w-20 relative">
-                  {/* Using Next.js Image component with responsive sizing */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-teal-400 rounded-full shadow-lg flex items-center justify-center overflow-hidden">
+                <div className="h-10 w-10 md:h-12 md:w-12 relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-teal-400 rounded-full shadow-md flex items-center justify-center overflow-hidden">
                     <Image 
                       src="/images/mayurchildcare.png" 
                       alt="Mayur Child Care Center Logo" 
                       fill
-                      sizes="(max-width: 768px) 56px, 80px"
-                      style={{objectFit: "fill"}}
+                      sizes="(max-width: 768px) 40px, 48px"
                       priority
+                      className="object-cover"
                     />
                   </div>
                 </div>
-                <div className="ml-2 md:ml-4">
-                  <h1 className="text-md md:text-xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+                <div className="ml-2 md:ml-3">
+                  <h1 className="text-sm md:text-lg font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
                     Mayur Child Care Center
                   </h1>
-                  {/* Added a tagline - responsive size */}
-                  <p className="text-xs md:text-sm text-gray-600">Nurturing young minds with care</p>
+                  <p className="text-xs text-gray-600 hidden sm:block">Nurturing young minds with care</p>
                 </div>
               </Link>
             </div>
             
             {/* Desktop Navigation Links */}
-            <div className="hidden md:flex items-center space-x-2">
+            <div className="hidden md:flex items-center space-x-1">
               {menuItems.map((item, index) => (
-                <div key={index} className="relative group">
+                <div key={index} className="relative">
                   {item.dropdownItems ? (
                     <button
                       onClick={() => toggleDropdown(index)}
-                      className="flex items-center px-4 py-3 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 focus:outline-none hover:bg-blue-50 rounded-full"
+                      className="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 focus:outline-none hover:bg-blue-50 rounded-full"
                       aria-expanded={activeDropdown === index}
                     >
                       {item.title}
                       <ChevronDown 
-                        className={`ml-1 h-4 w-4 transition-transform duration-200 ${activeDropdown === index ? 'rotate-180 text-blue-600' : 'group-hover:text-blue-600'}`} 
+                        className={`ml-1 h-4 w-4 transition-transform duration-200 ${activeDropdown === index ? 'rotate-180 text-blue-600' : ''}`} 
                       />
                     </button>
                   ) : (
                     <Link
                       href={item.href}
-                      className="flex items-center px-4 py-3 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 focus:outline-none hover:bg-blue-50 rounded-full"
+                      className="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 focus:outline-none hover:bg-blue-50 rounded-full"
                     >
                       {item.title}
                     </Link>
                   )}
+
+                  {/* Desktop Dropdown Menu */}
+                  <AnimatePresence>
+                    {activeDropdown === index && item.dropdownItems && (
+                      <motion.div
+                        variants={dropdownVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        className="absolute z-40 bg-white shadow-lg rounded-lg border border-gray-100 w-64 mt-1 right-0"
+                      >
+                        <div className="py-2">
+                          {item.dropdownItems.map((dropdownItem, idx) => (
+                            <Link 
+                              key={idx} 
+                              href={dropdownItem.href}
+                              className="block px-4 py-3 hover:bg-blue-50 transition-colors"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              <h3 className="text-sm font-medium text-gray-900">{dropdownItem.title}</h3>
+                              <p className="mt-1 text-xs text-gray-500">{dropdownItem.description}</p>
+                            </Link>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               ))}
             </div>
             
             {/* Action Buttons */}
-            <div className="hidden md:flex items-center space-x-3">
+            <div className="hidden md:flex items-center space-x-2">
               <Link 
                 href="/locations" 
-                className="px-5 py-2.5 rounded-full text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200"
+                className="px-4 py-2 rounded-full text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 text-sm"
               >
                 Locations
               </Link>
               <Link 
                 href="/request" 
-                className="px-6 py-2.5 rounded-full text-white bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 flex items-center shadow-md hover:shadow-lg transition-all duration-200"
+                className="px-4 py-2 rounded-full text-white bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 flex items-center shadow-md hover:shadow-lg transition-all duration-200 text-sm"
               >
                 Request a visit
-                <ChevronRight className="h-4 w-4 ml-2" />
+                <ChevronRight className="h-4 w-4 ml-1" />
               </Link>
             </div>
             
@@ -197,7 +210,7 @@ const Navbar = () => {
           </div>
         </div>
         
-        {/* Mobile Menu - Improved for better mobile experience */}
+        {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -207,7 +220,7 @@ const Navbar = () => {
               exit="closed"
               className="md:hidden overflow-hidden bg-white"
             >
-              <div className="px-3 pt-2 pb-6 space-y-1 max-h-[70vh] overflow-y-auto">
+              <div className="px-3 pt-2 pb-4 space-y-1 max-h-screen overflow-y-auto">
                 {menuItems.map((item, index) => (
                   <div key={index} className="border-b border-gray-100 last:border-0">
                     {item.dropdownItems ? (
@@ -223,7 +236,7 @@ const Navbar = () => {
                         </button>
                         
                         <AnimatePresence>
-                          {activeDropdown === index && item.dropdownItems && (
+                          {activeDropdown === index && (
                             <motion.div
                               variants={dropdownVariants}
                               initial="hidden"
@@ -235,10 +248,10 @@ const Navbar = () => {
                                 <Link 
                                   key={idx} 
                                   href={dropdownItem.href}
-                                  className="block py-3 border-b border-gray-100 last:border-0 hover:bg-blue-50 px-3 rounded-md my-1"
+                                  className="block py-2 border-b border-gray-100 last:border-0 hover:bg-blue-50 px-3 rounded-md my-1"
                                   onClick={() => setIsOpen(false)}
                                 >
-                                  <h3 className="text-sm font-medium text-gray-900 hover:text-blue-600">{dropdownItem.title}</h3>
+                                  <h3 className="text-sm font-medium text-gray-900">{dropdownItem.title}</h3>
                                   <p className="mt-1 text-xs text-gray-500">{dropdownItem.description}</p>
                                 </Link>
                               ))}
@@ -249,7 +262,7 @@ const Navbar = () => {
                     ) : (
                       <Link
                         href={item.href}
-                        className="w-full flex justify-between items-center px-3 py-3 text-gray-800 hover:bg-gray-50 rounded-md"
+                        className="block px-3 py-3 text-gray-800 hover:bg-gray-50 rounded-md"
                         onClick={() => setIsOpen(false)}
                       >
                         <span className="font-medium">{item.title}</span>
@@ -259,17 +272,17 @@ const Navbar = () => {
                 ))}
                 
                 {/* Mobile action buttons */}
-                <div className="mt-4 flex flex-col space-y-3 px-2">
+                <div className="mt-3 flex flex-col space-y-2 px-2">
                   <Link
                     href="/locations"
-                    className="px-4 py-2.5 rounded-full text-gray-700 border border-gray-300 hover:bg-gray-50 text-center font-medium"
+                    className="px-4 py-2 rounded-full text-gray-700 border border-gray-300 hover:bg-gray-50 text-center font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     Locations
                   </Link>
                   <Link
                     href="/request"
-                    className="px-4 py-2.5 rounded-full text-white bg-gradient-to-r from-blue-500 to-teal-500 flex items-center justify-center shadow-md font-medium"
+                    className="px-4 py-2 rounded-full text-white bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 flex items-center justify-center shadow-md font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     Request a visit
@@ -281,36 +294,6 @@ const Navbar = () => {
           )}
         </AnimatePresence>
       </nav>
-
-      {/* Desktop Dropdown Menus - Better positioning and styling */}
-      <AnimatePresence>
-        {activeDropdown !== null && menuItems[activeDropdown]?.dropdownItems && (
-          <motion.div
-            ref={dropdownRef}
-            variants={dropdownVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className="hidden md:block absolute left-0 right-0 z-40 bg-white shadow-xl rounded-xl border border-gray-100 overflow-hidden mx-4 lg:mx-12"
-          >
-            <div className="max-w-7xl mx-auto mt-1 w-full">
-              <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-                {menuItems[activeDropdown]?.dropdownItems.map((dropdownItem, idx) => (
-                  <Link 
-                    key={idx} 
-                    href={dropdownItem.href}
-                    className="p-5 rounded-lg transition-colors duration-150 hover:bg-blue-50 group border border-transparent hover:border-blue-100"
-                    onClick={() => setActiveDropdown(null)}
-                  >
-                    <h3 className="text-base font-semibold text-gray-900 group-hover:text-blue-600">{dropdownItem.title}</h3>
-                    <p className="mt-1 text-sm text-gray-500 group-hover:text-gray-700">{dropdownItem.description}</p>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 };
