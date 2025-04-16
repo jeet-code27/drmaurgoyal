@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const AboutDoctor = () => {
   return (
@@ -84,9 +85,11 @@ const AboutDoctor = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.9 }}
             >
-              <button className="bg-gray-800 text-white px-6 py-3 rounded-lg font-medium text-lg hover:bg-gray-900 transition-colors duration-300 mt-4">
-                Book an Appointment
+              <Link href="/bookconsultation">
+              <button className="bg-gray-800 text-white px-6 py-3 rounded-lg font-medium text-lg hover:bg-gray-900 cursor-pointer transition-colors duration-300 mt-4">
+                Book Consultation
               </button>
+              </Link>
             </motion.div>
           </div>
         </motion.div>

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { MapPin, Mail, Phone } from 'lucide-react';
+import Link from 'next/link';
 
 export default function LocationMayur() {
   const [mapLoaded, setMapLoaded] = useState(false);
@@ -55,12 +56,16 @@ export default function LocationMayur() {
           </div>
 
           <div className="mt-8 flex flex-wrap gap-4">
+            <Link href="/bookconsultation">
             <button className="bg-gray-800 hover:bg-gray-700 text-white rounded-md px-6 py-3 font-medium transition-colors">
-              Request a Visit
+              Book Consultation
             </button>
+            </Link>
+<Link href="/services">
             <button className="border border-gray-300 rounded-md px-6 py-3 font-medium hover:bg-gray-50 transition-colors">
-              Learn More
+              View Services
             </button>
+            </Link>
           </div>
         </div>
 

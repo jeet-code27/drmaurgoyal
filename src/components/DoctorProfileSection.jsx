@@ -44,7 +44,7 @@
                 
                 {/* Experience badge */}
                 <div className="absolute -bottom-6 -right-6 bg-teal-500 text-white px-6 py-4 rounded-full shadow-lg">
-                    <p className="font-bold text-2xl">5+ Years</p>
+                    <p className="font-bold text-2xl">7+ Years</p>
                     <p className="text-sm">Experience</p>
                 </div>
                 </div>

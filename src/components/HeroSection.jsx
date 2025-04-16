@@ -20,11 +20,11 @@ const HeroSection = () => {
               helping every child achieve their full potential.</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <Link href="/request-visit" passHref>
+              <Link href="/bookconsultation" passHref>
                 <button 
                   className="bg-gradient-to-r from-[#00bcd4] via-[#9c27b0] to-[#e50087] hover:bg-teal-600 text-white font-medium py-3 px-8 rounded-full text-lg transition-colors"
                 >
-                  Request a visit
+                Book Consultation
                 </button>
               </Link>
               <Link href="/services" passHref>

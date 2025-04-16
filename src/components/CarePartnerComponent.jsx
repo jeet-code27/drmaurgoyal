@@ -1,5 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const CarePartnerComponent = () => {
   // Animation variants
@@ -74,15 +75,17 @@ const CarePartnerComponent = () => {
 
         {/* CTA Button - Styled to match the image */}
         <motion.div variants={itemVariants}>
+          <Link href="/bookconsultation">
           <motion.button
-            className="px-12 py-4 rounded-full bg-white text-gray-900 border border-gray-200 font-medium text-base hover:shadow-md transition-shadow"
+            className="px-12 py-4 rounded-full bg-white cursor-pointer text-gray-900 border border-gray-200 font-medium text-base hover:shadow-md transition-shadow"
             variants={buttonVariants}
             initial="initial"
             whileHover="hover"
             whileTap="tap"
           >
-            Request a visit
+            Book Consultation
           </motion.button>
+          </Link>
         </motion.div>
       </motion.div>
     </div>

@@ -5,7 +5,7 @@ import FloatingContact from '@/components/FloatingContact';
 
 export const metadata = {
   title: 'Mayur Child Care Center',
-  description: 'Your trusted pharmaceutical company',
+  description: '',
 };
 
 export default function RootLayout({ children }) {

@@ -188,10 +188,10 @@ const Navbar = () => {
                 Locations
               </Link>
               <Link 
-                href="/request" 
+                href="/bookconsultation" 
                 className="px-4 py-2 rounded-full text-white bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 flex items-center shadow-md hover:shadow-lg transition-all duration-200 text-sm"
               >
-                Request a visit
+                Book Consultation
                 <ChevronRight className="h-4 w-4 ml-1" />
               </Link>
             </div>

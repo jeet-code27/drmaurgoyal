@@ -61,18 +61,34 @@ const Footer = () => {
                   <span className="mr-2 text-green-400 group-hover:scale-125 transition-transform duration-300">•</span> About Us
                 </Link>
               </li>
-             
-             
               <li>
                 <Link href="/services" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
                   <span className="mr-2 text-emerald-400 group-hover:scale-125 transition-transform duration-300">•</span> Services
                 </Link>
               </li>
+             
+             
               <li>
-                <Link href="/contact" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
-                  <span className="mr-2 text-emerald-400 group-hover:scale-125 transition-transform duration-300">•</span> Contact Us
+                <Link href="/blog" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
+                  <span className="mr-2 text-emerald-400 group-hover:scale-125 transition-transform duration-300">•</span> Blogs
                 </Link>
               </li>
+              <li>
+                <Link href="/location" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
+                  <span className="mr-2 text-emerald-400 group-hover:scale-125 transition-transform duration-300">•</span> Location
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
+                  <span className="mr-2 text-emerald-400 group-hover:scale-125 transition-transform duration-300">•</span> FAQ
+                </Link>
+              </li>
+              <li>
+                <Link href="/bookconsultation" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
+                  <span className="mr-2 text-emerald-400 group-hover:scale-125 transition-transform duration-300">•</span> Book Consultation
+                </Link>
+              </li>
+              
             </ul>
           </div>
 

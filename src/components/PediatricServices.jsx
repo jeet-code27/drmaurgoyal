@@ -92,10 +92,10 @@ const PediatricServices = () => {
               whileTap="tap"
             >
               <Link 
-                href="/request-visit"
+                href="/bookconsultation"
                 className="inline-block px-8 py-3 bg-gray-800 text-white font-medium rounded-full hover:bg-gray-700 transition-colors"
               >
-                Request a visit
+                Book Consultation
               </Link>
             </motion.div>
             <motion.div
