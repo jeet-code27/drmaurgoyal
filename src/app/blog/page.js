@@ -41,8 +41,9 @@ export default function BlogPage() {
                   Pediatric Health Blog by Dr. Mayur Kumar Goyal
                 </h1>
                 <p className="text-xl text-gray-700 mb-8 max-w-3xl">
-                  Expert articles on pediatrics, neonatal care, and raising healthy children from one of Ajmer's leading pediatricians.
-                </p>
+  {`Expert articles on pediatrics, neonatal care, and raising healthy children from one of Ajmer's leading pediatricians.`}
+</p>
+
                 <div className="flex flex-wrap gap-3 mb-6">
                   <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm">
                     <Baby className="h-4 w-4 mr-1" />
