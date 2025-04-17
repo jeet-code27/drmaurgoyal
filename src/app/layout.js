@@ -4,6 +4,7 @@ import './globals.css';
 import FloatingContact from '@/components/FloatingContact';
 
 export const metadata = {
+  metadataBase: new URL('https://drmayurkumargoyal.com'),
   title: 'Mayur Child Care Center',
   description: '',
 };
