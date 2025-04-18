@@ -3,7 +3,7 @@ import BookingPage from "@/components/BookingPage";
 
 
 export const metadata = {
-    title: 'Book Appointment | Dr. Mayur Kumar Goyal | Pediatric Consultation in Ajmer',
+    title: 'Book Appointment with Pediatrician in Ajmer || Dr. Mayur Kumar Goyal',
     description: 'Schedule an appointment with Dr. Mayur Kumar Goyal, the best pediatrician in Ajmer. Book online for newborn care, vaccinations, and child health consultations.',
     keywords: [
       'pediatric appointment Ajmer',

@@ -31,11 +31,11 @@ export const metadata = {
         },
       ],
       type: 'website',
-      url: 'https://www.drmayurkumargoyal.com/location',
+      url: 'https://www.drmayurkumargoyal.com/locations',
       siteName: 'Mayur Child Care Center',
     },
     alternates: {
-      canonical: 'https://www.drmayurkumargoyal.com/location',
+      canonical: 'https://www.drmayurkumargoyal.com/locations',
     },
     robots: {
       index: true,

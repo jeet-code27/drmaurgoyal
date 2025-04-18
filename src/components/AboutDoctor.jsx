@@ -51,7 +51,7 @@ const AboutDoctor = () => {
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               <h3 className="text-3xl font-bold text-gray-900">Dr. Mayur Kumar Goyal</h3>
-              <h4 className="text-xl font-semibold text-cyan-500 mt-1">Pediatrician & Neonatologist</h4>
+              <h1 className="text-xl font-semibold text-cyan-500 mt-1">Pediatrician & Neonatologist</h1>
             </motion.div>
 
             <motion.div 

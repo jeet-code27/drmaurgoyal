@@ -32,13 +32,13 @@ const Footer = () => {
               Nurturing minds, fostering growth, and creating a safe haven for your children to learn, play, and thrive in our green sanctuary of learning.
             </p>
             <div className="flex space-x-4 mb-6">
-              <a href="https://facebook.com" className="bg-gradient-to-r from-emerald-500 to-green-600 hover:opacity-90 p-2 rounded-full transition-all duration-300 shadow-lg shadow-green-900/30" aria-label="Facebook">
+              <a href="https://www.facebook.com/people/Mayur-Child-Care-Center/100089743385413/" target='_blank' className="bg-gradient-to-r from-emerald-500 to-green-600 hover:opacity-90 p-2 rounded-full transition-all duration-300 shadow-lg shadow-green-900/30" aria-label="Facebook">
                 <Facebook size={20} className="text-white" />
               </a>
-              <a href="https://instagram.com" className="bg-gradient-to-r from-green-500 to-teal-500 hover:opacity-90 p-2 rounded-full transition-all duration-300 shadow-lg shadow-green-900/30" aria-label="Instagram">
+              <a href="https://instagram.com/mayur_child_care_center" target='_blank' className="bg-gradient-to-r from-green-500 to-teal-500 hover:opacity-90 p-2 rounded-full transition-all duration-300 shadow-lg shadow-green-900/30" aria-label="Instagram">
                 <Instagram size={20} className="text-white" />
               </a>
-              <a href="https://youtube.com" className="bg-gradient-to-r from-teal-500 to-emerald-600 hover:opacity-90 p-2 rounded-full transition-all duration-300 shadow-lg shadow-green-900/30" aria-label="YouTube">
+              <a href="https://www.youtube.com/@mayurchildcarecenter-official" target='_blank' className="bg-gradient-to-r from-teal-500 to-emerald-600 hover:opacity-90 p-2 rounded-full transition-all duration-300 shadow-lg shadow-green-900/30" aria-label="YouTube">
                 <Youtube size={20} className="text-white" />
               </a>
             </div>

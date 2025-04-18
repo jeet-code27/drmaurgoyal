@@ -3,7 +3,7 @@ import Image from 'next/image';
 const AboutCoreValues = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 bg-white font-sans">
-      <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our core values</h1>
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our core values</h2>
       
       <p className="text-gray-700 mb-12 max-w-3xl">
         Through our community of more than 350 expert clinicians, we serve thousands of

@@ -101,20 +101,19 @@ const Navbar = () => {
       <nav ref={navbarRef} className="bg-gradient-to-r from-blue-50 to-teal-50 shadow-lg w-full sticky top-0 z-50 border-b-2 border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 md:h-20">
-            {/* Logo */}
+            {/* Logo - MODIFIED: increased size, removed gradient background, fixed image format issues */}
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="flex items-center">
-                <div className="h-10 w-10 md:h-12 md:w-12 relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-teal-400 rounded-full shadow-md flex items-center justify-center overflow-hidden">
-                    <Image 
-                      src="/images/mayurchildcare.png" 
-                      alt="Mayur Child Care Center Logo" 
-                      fill
-                      sizes="(max-width: 768px) 40px, 48px"
-                      priority
-                      className="object-cover"
-                    />
-                  </div>
+                <div className="h-16 w-16 md:h-20 md:w-20 relative">
+                  <Image 
+                    src="/images/mayurchildcare.png" 
+                    alt="Mayur Child Care Center Logo" 
+                    width={100}
+                    height={100}
+                    priority
+                    className="object-contain"
+                    unoptimized={true}
+                  />
                 </div>
                 <div className="ml-2 md:ml-3">
                   <h2 className="text-sm md:text-lg font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
@@ -185,7 +184,7 @@ const Navbar = () => {
                 href="/locations" 
                 className="px-4 py-2 rounded-full text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 text-sm"
               >
-                Locations
+                Location
               </Link>
               <Link 
                 href="/bookconsultation" 

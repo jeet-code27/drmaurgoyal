@@ -66,12 +66,12 @@ const AboutHero = () => {
             About us
           </motion.h2>
           
-          <motion.h1 
+          <motion.h2 
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight"
             variants={itemVariants}
           >
             We empower children and families in Ajmer
-          </motion.h1>
+          </motion.h2>
           
           <motion.p 
             className="text-gray-600 mb-8"

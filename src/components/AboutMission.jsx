@@ -14,10 +14,10 @@ const AboutMission = () => {
               OUR MISSION
             </p>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-12">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-12">
               <span className="block mb-1">Change lives.</span>
               <span className="block">Change the world.</span>
-            </h1>
+            </h2>
             
             <div className="mb-10">
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">Our Purpose</h2>

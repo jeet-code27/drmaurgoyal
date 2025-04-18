@@ -59,19 +59,19 @@ const LocationHero = () => {
           animate="visible"
           variants={containerVariants}
         >
-          <motion.h2 
+          <motion.h1 
             className="uppercase text-gray-700 text-xl font-bold tracking-wider mb-4"
             variants={itemVariants}
           >
           Mayur Child Care Center Location
-          </motion.h2>
+          </motion.h1>
           
-          <motion.h1 
+          <motion.h2 
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight"
             variants={itemVariants}
           >
            Visit us in person
-          </motion.h1>
+          </motion.h2>
           
           <motion.p 
             className="text-gray-600 mb-8"
