@@ -7,7 +7,7 @@ export default function LocationMayur() {
   const [mapLoaded, setMapLoaded] = useState(false);
 
   return (
-    <div className="max-w-7xl mt-14 mb-14 mx-auto p-4 font-sans">
+    <div className="max-w-7xl mt-14 mb-14 mx-auto p-4 font-sans bg-white">
       <div className="flex flex-col md:flex-row gap-6">
         {/* Left section */}
         <div className="flex-1">
@@ -62,7 +62,7 @@ export default function LocationMayur() {
             </button>
             </Link>
 <Link href="/services">
-            <button className="border border-gray-300 rounded-md px-6 py-3 font-medium hover:bg-gray-50 transition-colors">
+            <button className="border  border-gray-300 rounded-md px-6 py-3 font-medium hover:bg-gray-50 transition-colors text-gray-800">
               View Services
             </button>
             </Link>

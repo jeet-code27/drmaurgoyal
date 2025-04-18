@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const AboutCoreValues = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12 font-sans">
+    <div className="max-w-7xl mx-auto px-4 py-12 bg-white font-sans">
       <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our core values</h1>
       
       <p className="text-gray-700 mb-12 max-w-3xl">
@@ -32,7 +32,7 @@ const AboutCoreValues = () => {
           <div>
             <div className="flex flex-col md:flex-row gap-4">
               <h2 className="text-2xl font-bold text-gray-900 w-full md:w-1/3">Results for our Patients</h2>
-              <ul className="space-y-2 w-full md:w-2/3">
+              <ul className="space-y-2 w-full md:w-2/3 text-gray-700">
                 <li className="flex items-start">
                   <div className="text-green-600 mr-2 mt-1 flex-shrink-0">✓</div>
                   <p>We are passionate about driving results for our patients—our patients are our WHY.</p>
@@ -53,7 +53,7 @@ const AboutCoreValues = () => {
           <div>
             <div className="flex flex-col md:flex-row gap-4">
               <h2 className="text-2xl font-bold text-gray-900 w-full md:w-1/3">Excellence</h2>
-              <ul className="space-y-2 w-full md:w-2/3">
+              <ul className="space-y-2 w-full md:w-2/3 text-gray-700">
                 <li className="flex items-start">
                   <div className="text-green-600 mr-2 mt-1 flex-shrink-0">✓</div>
                   <p>We do what we say we're going to do.</p>
@@ -86,7 +86,7 @@ const AboutCoreValues = () => {
           <div>
             <div className="flex flex-col md:flex-row gap-4">
               <h2 className="text-2xl font-bold text-gray-900 w-full md:w-1/3">Continuous Improvement</h2>
-              <ul className="space-y-2 w-full md:w-2/3">
+              <ul className="space-y-2 w-full md:w-2/3 text-gray-700">
                 <li className="flex items-start">
                   <div className="text-green-600 mr-2 mt-1 flex-shrink-0">✓</div>
                   <p>We are determined to get better every day.</p>
@@ -115,7 +115,7 @@ const AboutCoreValues = () => {
           <div>
             <div className="flex flex-col md:flex-row gap-4">
               <h2 className="text-2xl font-bold text-gray-900 w-full md:w-1/3">Integrity</h2>
-              <ul className="space-y-2 w-full md:w-2/3">
+              <ul className="space-y-2 w-full md:w-2/3 text-gray-700">
                 <li className="flex items-start">
                   <div className="text-green-600 mr-2 mt-1 flex-shrink-0">✓</div>
                   <p>We will not compromise our integrity.</p>
@@ -140,7 +140,7 @@ const AboutCoreValues = () => {
           <div>
             <div className="flex flex-col md:flex-row gap-4">
               <h2 className="text-2xl font-bold text-gray-900 w-full md:w-1/3">One Team</h2>
-              <ul className="space-y-2 w-full md:w-2/3">
+              <ul className="space-y-2 w-full md:w-2/3 text-gray-700">
                 <li className="flex items-start">
                   <div className="text-green-600 mr-2 mt-1 flex-shrink-0">✓</div>
                   <p>We are woven together with our patients, families, providers, and community.</p>

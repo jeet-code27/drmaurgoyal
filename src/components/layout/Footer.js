@@ -74,7 +74,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/location" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
+                <Link href="/locations" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
                   <span className="mr-2 text-emerald-400 group-hover:scale-125 transition-transform duration-300">•</span> Location
                 </Link>
               </li>
@@ -138,9 +138,9 @@ const Footer = () => {
               © {new Date().getFullYear()} <span className="bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent font-medium">Mayur Child Care Center</span>. All rights reserved.
             </div>
             <div className="flex space-x-4 text-gray-400 text-sm">
-              <Link href="/privacy" className="hover:text-green-400 transition-colors duration-300">Privacy Policy</Link>
+              <Link href="/" className="hover:text-green-400 transition-colors duration-300">Privacy Policy</Link>
               <span className="text-green-600">•</span>
-              <Link href="/terms" className="hover:text-teal-400 transition-colors duration-300">Terms of Service</Link>
+              <Link href="/" className="hover:text-teal-400 transition-colors duration-300">Terms of Service</Link>
             </div>
           </div>
         </div>

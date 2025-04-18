@@ -8,7 +8,7 @@ import PatientReviews from "@/components/PatientReviews";
 import PediatricTherapySection from "@/components/PediatricTherapySection";
 
   export const metadata = {
-  title: 'Best Pediatrician in Ajmer | Newborn Specialist | Dr. Mayur Kumar Goyal',
+  title: 'Best Pediatrician in Ajmer | Dr. Mayur Kumar Goyal',
   description: 'Dr. Mayur Kumar Goyal is a leading pediatrician and neonatologist in Ajmer providing expert child care at Mayur Child Care Center. Specializing in newborn care, vaccinations, and pediatric health services.',
   keywords: [
     'best pediatrician in Ajmer',

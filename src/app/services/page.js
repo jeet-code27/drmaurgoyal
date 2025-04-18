@@ -3,7 +3,7 @@ import PediatricServices from "@/components/PediatricServices";
 import ServiceBoxes from "@/components/ServiceBox";
 
 export const metadata = {
-    title: 'Pediatric Services in Ajmer | Dr. Mayur Kumar Goyal',
+    title: 'Best Pediatric Services in Ajmer | Dr. Mayur Kumar Goyal',
     description: 'Comprehensive pediatric services at Mayur Child Care Center, Ajmer. Newborn care, vaccinations, growth monitoring, and specialized child healthcare services.',
     keywords: [
       'pediatric services Ajmer',
@@ -18,7 +18,7 @@ export const metadata = {
       'pediatric clinic facilities'
     ],
     openGraph: {
-      title: 'Pediatric Healthcare Services | Mayur Child Care Center Ajmer',
+      title: 'Best Pediatric Healthcare Services | Mayur Child Care Center Ajmer',
       description: 'Explore our complete range of pediatric services including newborn care, immunizations, growth monitoring, and specialized child treatments.',
       images: [
         {

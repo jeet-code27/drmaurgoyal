@@ -52,12 +52,12 @@
             
             {/* Text content */}
             <div className="w-full lg:w-3/5 order-1 lg:order-2">
-                <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Dr. Mayur Kumar Goyal
-                </h1>
-                <h2 className="text-xl text-teal-600 font-medium mb-6">
-                Pediatrician & Neonatologist
                 </h2>
+                <h1 className="text-xl text-teal-600 font-medium mb-6">
+                Pediatrician & Neonatologist
+                </h1>
                 
                 <div className="space-y-4 text-gray-600">
                 <p>

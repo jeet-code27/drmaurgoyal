@@ -29,9 +29,9 @@ const PediatricTherapySection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
           {/* Text content */}
           <div className="w-full lg:w-3/5">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               The children who we serve are at the center of everything we do.
-            </h1>
+            </h2>
             <p className="text-gray-600 mb-10 text-lg">
               We provide comprehensive, coordinated, interdisciplinary, pediatric care and therapy services, 
               focused on addressing the unique needs of every child.

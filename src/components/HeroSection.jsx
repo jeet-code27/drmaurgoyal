@@ -9,9 +9,9 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row items-center">
           {/* Left Content */}
           <div className="w-full lg:w-1/2 pr-0 lg:pr-8 z-10">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
               Mayur Child Care Center is changing lives, one child at a time
-            </h1>
+            </h2>
             <p className="text-lg text-gray-700 mb-6">
               Mayur Child Care Center is an established leader in pediatric therapy, 
               serving Ajmer for more than 7+ years, and dedicated to 

@@ -14,12 +14,17 @@ function getBlogs() {
 
 export const metadata = {
   title: 'Pediatric Health Blogs by Dr. Mayur Kumar Goyal',
-  description: 'Expert articles on pediatrics, neonatal care, and child health by Dr. Mayur Kumar Goyal',
+  description: 'Expert articles on pediatrics, neonatal care, and child health by Dr. Mayur Kumar Goyal - Pediatrician in Ajmer (Rajasthan) India',
+  authors: [{ name: 'Dr. Mayur Kumar Goyal', url: 'https://drmayurkumargoyal.com' }],
+  keywords: 'pediatrics, child health, neonatal care, pediatrician, Ajmer, Dr. Mayur Kumar Goyal',
   openGraph: {
     title: 'Pediatric Health Blogs by Dr. Mayur Kumar Goyal',
     description: 'Expert articles on pediatrics, neonatal care, and child health by Dr. Mayur Kumar Goyal',
     type: 'website',
     url: 'https://drmayurkumargoyal.com/blog',
+  },
+  alternates: {
+    canonical: 'https://www.drmayurkumargoyal.com/blog',
   },
 };
 

@@ -117,9 +117,9 @@ const Navbar = () => {
                   </div>
                 </div>
                 <div className="ml-2 md:ml-3">
-                  <h1 className="text-sm md:text-lg font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+                  <h2 className="text-sm md:text-lg font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
                     Mayur Child Care Center
-                  </h1>
+                  </h2>
                   <p className="text-xs text-gray-600 hidden sm:block">Nurturing young minds with care</p>
                 </div>
               </Link>

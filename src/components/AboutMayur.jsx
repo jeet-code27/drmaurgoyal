@@ -20,7 +20,7 @@ export default function AboutMayur() {
         </p>
         
         {/* Main vision statement with enhanced highlight styling */}
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-10">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-10">
           Our vision is to create 
           <span className="relative mx-2">
             <span className="relative bg-purple-200 rounded-xl z-10"> generational change </span>
@@ -32,7 +32,7 @@ export default function AboutMayur() {
             <span className="absolute bottom-1 left-0 w-full h-4 bg-purple-200 opacity-60 z-0 rounded-sm"></span>
           </span> 
           for children and families.
-        </h1>
+        </h2>
         
         {/* Description with improved readability and spacing */}
         <p className="text-gray-600 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed">

@@ -296,7 +296,7 @@ const BookingSystem = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-4 mt-6 sm:p-6 bg-white rounded-lg shadow-lg text-teal-500">
+    <div className="max-w-4xl mx-auto p-4  sm:p-6 bg-white rounded-lg shadow-lg text-teal-500">
       <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-teal-700">Book Your Consultation with Dr. Mayur Kumar Goyal</h1>
       
       {!firestoreReady && (
@@ -334,8 +334,8 @@ const BookingSystem = () => {
        
         
         {/* Date Selection */}
-        <div className='w-[27%]'>
-          <label className="block text-black font-bold mb-2">
+        <div className='w-[50%] lg:w-[40%]'>
+          <label className="block text-[red] font-bold mb-2">
            Please Select Date for Your Consultation*
           </label>
           <input

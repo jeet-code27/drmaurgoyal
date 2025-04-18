@@ -5,7 +5,7 @@ import LocationMayur from "@/components/LocationMayur";
 
 
 export const metadata = {
-    title: 'Location & Contact | Mayur Child Care Center | Pediatric Clinic in Ajmer',
+    title: 'Location & Contact | Mayur Child Care Center - Ajmer',
     description: 'Find our pediatric clinic location in Ajmer, contact details, and directions to Mayur Child Care Center with Dr. Mayur Kumar Goyal.',
     keywords: [
       'pediatric clinic location Ajmer',
@@ -61,9 +61,10 @@ export const metadata = {
   };
 
   
-export default function AboutUs() {
+export default function Location() {
     return (
 <>
+<div className="bg-white">
 <LocationHero/>
 <hr className="text-[#1018281f]"/>
 <LocationMayur/>
@@ -71,6 +72,7 @@ export default function AboutUs() {
 <FAQSection/>
 <hr className="text-[#1018281f]"/>
       <CarePartnerComponent/>
+</div>
 </>
     );
 

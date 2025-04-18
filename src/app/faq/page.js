@@ -60,9 +60,13 @@ export const metadata = {
 export default function FAQ() {
   return(
   <>
+  <div className="bg-white">
+  <h1 className="text-3xl md:text-4xl font-bold text-gray-800  text-center pt-10 mb-5 ">Frequently Asked Questions</h1>
   <FAQSection />
+
   <hr className="text-[#1018281f]"/>
       <CarePartnerComponent/>
+      </div>
   </>
   );
 }

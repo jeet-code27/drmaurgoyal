@@ -66,11 +66,11 @@ const CarePartnerComponent = () => {
           className="text-center mb-12"
           variants={itemVariants}
         >
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
             From the very first phone call with<br />
             a care partner, through every<br />
             milestone, we are in this together.
-          </h1>
+          </h2>
         </motion.div>
 
         {/* CTA Button - Styled to match the image */}
