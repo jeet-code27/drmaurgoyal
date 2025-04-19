@@ -20,11 +20,11 @@ const Footer = () => {
             <div className="mb-5">
               <Link href="/" className="inline-block">
                 <Image 
-                  src="/images/logo.png" 
+                  src="/images/mayurchildcare.png" 
                   alt="Mayur Child Care Center Logo" 
                   width={160} 
                   height={60}
-                  className="h-16 w-auto"
+                  className="h-30 w-auto"
                 />
               </Link>
             </div>

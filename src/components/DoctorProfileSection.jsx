@@ -77,7 +77,7 @@
                     About Mayur Child Care Center
                     </h3>
                     <p>
-                    Mayur Child Care Center was established in 2018. The hospital offers Immunization, Regular Check-ups, 24 hours admission facilities, day care, pharmacy and laboratory investigations Neonatal Care, Counselling and OPD Consultation for its patients. The hospital also offers online Personal appointment booking facility, Video, Audio and Chat consultations. Mayur Children Hospital offers 24 hours pediatric health care facilities.
+                    Mayur Child Care Center was established in 2018. The Care Center offers Immunization, Regular Check-ups, 24 hours admission facilities, day care, pharmacy and laboratory investigations Neonatal Care, Counselling and OPD Consultation for its patients. Mayur Child Care Center also offers online Personal appointment booking facility. Mayur Child Care Center offers 24 hours pediatric health care facilities.
                     </p>
                 </div>
                 

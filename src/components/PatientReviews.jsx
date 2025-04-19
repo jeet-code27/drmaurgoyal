@@ -3,6 +3,7 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Star, Quote, ChevronRight, ChevronLeft } from 'lucide-react';
+import ElfsightWidget from './ElfsightWidget';
 
 const PatientReviews = () => {
   const responsive = {
@@ -114,56 +115,10 @@ const PatientReviews = () => {
           Dr. Mayur Kumar Goyal
           <span className="block text-lg md:text-xl lg:text-2xl mt-1">M.B.B.S., M.D. (Pediatrics), Pediatrician & Neonatologist</span>
         </h3>
+        
+      <ElfsightWidget/>
       </div>
 
-      <div className="relative z-20">
-        <Carousel
-          responsive={responsive}
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={5000}
-          customDot={<CustomDot />}
-          customRightArrow={<CustomRightArrow />}
-          customLeftArrow={<CustomLeftArrow />}
-          removeArrowOnDeviceType={["mobile"]}
-          deviceType="desktop"
-          itemClass="px-2 md:px-4"
-          containerClass="z-20"
-          className="pb-12"
-        >
-          {reviews.map((review) => (
-            <div 
-              key={review.id}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-6 md:p-8 h-full transition-all duration-500 transform hover:-translate-y-1"
-            >
-              <div className="relative">
-                <div className="absolute -top-2 -left-2 opacity-10">
-                  <Quote size={60} className="text-teal-500" />
-                </div>
-                
-                <div className="flex flex-col items-center text-center">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 md:w-6 md:h-6 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  
-                  <p className="text-base md:text-lg text-gray-700 italic mb-6 relative z-10">
-                    "{review.comment}"
-                  </p>
-                  
-                  <div className="space-y-2">
-                    <p className="font-semibold text-gray-800 text-lg md:text-xl">{review.name}</p>
-                    <div className="h-1 w-16 md:w-20 mx-auto bg-gradient-to-r from-teal-500 to-teal-300 rounded-full mb-2"></div>
-                    <p className="text-teal-500 font-medium text-sm md:text-base">{review.procedure}</p>
-                    <p className="text-gray-500 text-xs md:text-sm">{review.date}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Carousel>
-      </div>
     </div>
   );
 };
