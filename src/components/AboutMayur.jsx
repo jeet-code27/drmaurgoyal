@@ -21,24 +21,22 @@ export default function AboutMayur() {
         
         {/* Main vision statement with enhanced highlight styling */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-10">
-          Our vision is to create 
+        Our goal is to create
           <span className="relative mx-2">
-            <span className="relative bg-purple-200 rounded-xl z-10"> generational change </span>
+            <span className="relative bg-purple-200 rounded-xl z-10">  a better future   </span>
             <span className="absolute bottom-1 left-0 w-full h-4 bg-purple-200 opacity-60 z-0 rounded-sm"></span>
           </span> 
           by 
           <span className="relative mx-2">
-            <span className="relative z-10 bg-purple-200 rounded-xl"> transforming pediatric healthcare </span>
+            <span className="relative z-10 bg-purple-200 rounded-xl"> improving children's health </span>
             <span className="absolute bottom-1 left-0 w-full h-4 bg-purple-200 opacity-60 z-0 rounded-sm"></span>
           </span> 
-          for children and families.
+          and lives.
         </h2>
         
         {/* Description with improved readability and spacing */}
-        <p className="text-gray-600 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed">
-          We provide comprehensive, coordinated, interdisciplinary, pediatric care and therapy services, focused on addressing
-          the unique needs of every child. We meet every child where they are, treat every child as an individual, and celebrate
-          every child's unique gifts and magic while helping them develop tools that will serve them throughout their lives.
+        <p className="text-gray-600 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed text-justify">
+        We provide complete and caring medical support for children of all ages. At Mayur Child Care Center, our team listens to each child’s needs and offers personalized treatment with love and respect. We help every child grow up healthy, confident, and happy. Dr. Mayur Kumar Goyal is known as one of the <b> best pediatric doctors in Ajmer</b>, trusted by many families for expert care. Whether it’s regular checkups or special treatments, we are here to give your child the best care in <b>Ajmer’s child healthcare.</b>
         </p>
       </div>
     </section>

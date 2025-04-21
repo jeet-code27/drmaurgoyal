@@ -1,108 +1,14 @@
 "use client";
 import React from 'react';
-import Carousel from 'react-multi-carousel';
+
 import 'react-multi-carousel/lib/styles.css';
-import { Star, Quote, ChevronRight, ChevronLeft } from 'lucide-react';
+
 import ElfsightWidget from './ElfsightWidget';
 
 const PatientReviews = () => {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 1536 },
-      items: 3,
-      slidesToSlide: 1
-    },
-    desktop: {
-      breakpoint: { max: 1536, min: 1024 },
-      items: 3,
-      slidesToSlide: 1
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 640 },
-      items: 1,
-      slidesToSlide: 1
-    },
-    mobile: {
-      breakpoint: { max: 640, min: 0 },
-      items: 1,
-      slidesToSlide: 1
-    }
-  };
+ 
 
-  const reviews = [
-    {
-      id: 1,
-      name: "Rahul Sharma",
-      rating: 5,
-      date: "January 15, 2025",
-      comment: "Dr. Mayur Kumar Goyal is an exceptional pediatrician. His gentle approach with my newborn made all the difference during vaccinations. His expertise in neonatology is truly commendable.",
-      procedure: "Newborn Vaccination"
-    },
-    {
-      id: 2,
-      name: "Priya Verma",
-      rating: 5,
-      date: "February 2, 2025",
-      comment: "When my 3-year-old had high fever, Dr. Goyal's accurate diagnosis and treatment plan helped him recover quickly. His patience with children is remarkable.",
-      procedure: "Pediatric Fever Treatment"
-    },
-    {
-      id: 3,
-      name: "Ankit Patel",
-      rating: 5,
-      date: "February 10, 2025",
-      comment: "Dr. Mayur's care for my premature baby was outstanding. His knowledge as a neonatologist gave us confidence during those critical early weeks.",
-      procedure: "Premature Baby Care"
-    },
-    {
-      id: 4,
-      name: "Neha Gupta",
-      rating: 5,
-      date: "January 28, 2025",
-      comment: "Dr. Goyal took time to explain my child's growth milestones in detail. His friendly demeanor makes children comfortable during visits. Highly recommended pediatrician in Ajmer!",
-      procedure: "Child Growth Monitoring"
-    }
-  ];
 
-  const CustomDot = ({ onClick, ...rest }) => {
-    const { active } = rest;
-    return (
-      <button
-        className={`mx-1 transition-all duration-300 ${
-          active 
-            ? 'w-8 h-2 bg-gradient-to-r from-teal-500 to-teal-300 rounded-full' 
-            : 'w-2 h-2 bg-gray-300 rounded-full hover:bg-gray-400'
-        }`}
-        onClick={() => onClick()}
-      />
-    );
-  };
-
-  const CustomRightArrow = ({ onClick }) => {
-    return (
-      <button
-        onClick={onClick}
-        className="absolute right-0 z-10 p-2 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:bg-gray-100"
-        style={{ top: "50%", transform: "translateY(-50%)" }}
-        aria-label="Next slide"
-      >
-        <ChevronRight className="w-6 h-6 text-teal-500" />
-      </button>
-    );
-  };
-
-  const CustomLeftArrow = ({ onClick }) => {
-    return (
-      <button
-        onClick={onClick}
-        className="absolute left-0 z-10 p-2 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:bg-gray-100"
-        style={{ top: "50%", transform: "translateY(-50%)" }}
-        aria-label="Previous slide"
-      >
-        <ChevronLeft className="w-6 h-6 text-teal-500" />
-      </button>
-    );
-  };
 
   return (
     <div className="w-full px-4 py-8 md:py-12 lg:py-16 relative bg-white">

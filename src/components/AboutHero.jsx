@@ -70,14 +70,20 @@ const AboutHero = () => {
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight"
             variants={itemVariants}
           >
-            We empower children and families in Ajmer
+          Empowering Children and Families with Expert Pediatric Care in Ajmer
           </motion.h2>
           
           <motion.p 
             className="text-gray-600 mb-8"
             variants={itemVariants}
           >
-            At the core of our success is a magical team: team members are experts in their fields and deeply dedicated to the success of each and every child.
+           At the heart of our success is a passionate team of pediatric specialists dedicated to helping every child thrive. Our experts bring years of experience, compassion, and care to support families through personalized child-focused therapies and treatments.
+          </motion.p>
+          <motion.p 
+            className="text-gray-600 mb-8"
+            variants={itemVariants}
+          >
+        Recognized as one of the <b>best pediatric centers in Ajmer</b>, we take pride in offering evidence-based, nurturing care tailored to each child’s unique needs.
           </motion.p>
           
           <motion.div 

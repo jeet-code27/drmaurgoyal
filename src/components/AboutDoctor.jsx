@@ -16,10 +16,7 @@ const AboutDoctor = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">Meet Dr. Mayur Kumar Goyal</h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-            Dr. Mayur Kumar Goyal is an extraordinary pediatrician and neonatologist. 
-            His life's work is helping children achieve their full potential, 
-            and live rich, independent, happy lives where they contribute to and 
-            enhance the world around them.
+         <b> Dr. Mayur Kumar Goyal is a caring and experienced pediatrician and neonatologist in Ajmer.</b> He is dedicated to helping children grow up healthy, confident, and happy, so they can live their best lives and make a positive difference in the world.
           </p>
         </motion.div>
 
@@ -80,17 +77,17 @@ const AboutDoctor = () => {
               </p>
             </motion.div>
 
+            <Link href="/bookconsultation">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.9 }}
             >
-              <Link href="/bookconsultation">
               <button className="bg-gray-800 text-white px-6 py-3 rounded-lg font-medium text-lg hover:bg-gray-900 cursor-pointer transition-colors duration-300 mt-4">
                 Book Consultation
               </button>
-              </Link>
             </motion.div>
+              </Link>
           </div>
         </motion.div>
       </div>

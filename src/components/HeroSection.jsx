@@ -13,11 +13,7 @@ const HeroSection = () => {
               Mayur Child Care Center is changing lives, one child at a time
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              Mayur Child Care Center is an established leader in pediatric therapy, 
-              serving Ajmer for more than 7+ years, and dedicated to 
-              celebrating and empowering children at all stages of 
-              development. <span className="font-bold">We're on a mission to change the world by 
-              helping every child achieve their full potential.</span>
+            Mayur Child Care Center in Ajmer is dedicated to children’s health. We’ve been helping kids for more than 7 years. <span className="font-bold">Our goal is to give every child the care they need to grow healthy and happy.</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Link href="/bookconsultation" passHref>

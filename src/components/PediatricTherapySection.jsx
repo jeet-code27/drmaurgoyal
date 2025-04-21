@@ -30,15 +30,14 @@ const PediatricTherapySection = () => {
           {/* Text content */}
           <div className="w-full lg:w-3/5">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              The children who we serve are at the center of everything we do.
+            At Mayur Child Care Center, every child is at the heart of everything we do.
             </h2>
-            <p className="text-gray-600 mb-10 text-lg">
-              We provide comprehensive, coordinated, interdisciplinary, pediatric care and therapy services, 
-              focused on addressing the unique needs of every child.
+            <p className="text-gray-600 mb-10 text-lg text-justify">
+            We offer <b>expert pediatric care and therapy in Ajmer</b>, focusing on the unique needs of each child. Our services are designed to give your child the best possible start in life with care that’s personal, kind, and backed by experience.
             </p>
             
             {/* Features list */}
-            <ul className="space-y-8">
+            <ul className="space-y-8 text-justify">
               <li className="flex items-start gap-4">
                 <div className="mt-1 flex-shrink-0">
                   <svg className="h-6 w-6 text-teal-500" fill="currentColor" viewBox="0 0 20 20">
@@ -46,8 +45,8 @@ const PediatricTherapySection = () => {
                   </svg>
                 </div>
                 <div>
-                  <span className="font-medium text-gray-800">Child-Centered:</span>
-                  <span className="text-gray-600"> Personalized and coordinated care, designed around your child's unique goals and needs.</span>
+                  <span className="font-medium text-gray-800">Child-Focused Care:</span>
+                  <span className="text-gray-600"> We listen carefully and plan treatment based on your child’s personal goals and needs.</span>
                 </div>
               </li>
               
@@ -58,8 +57,8 @@ const PediatricTherapySection = () => {
                   </svg>
                 </div>
                 <div>
-                  <span className="font-medium text-gray-800">Evidence-based and Comprehensive:</span>
-                  <span className="text-gray-600"> Backed by science, and delivered by interdisciplinary experts—all under one roof.</span>
+                  <span className="font-medium text-gray-800">Care You Can Trust: </span>
+                  <span className="text-gray-600">  Our team uses the best medical knowledge to help your child grow up healthy and strong.</span>
                 </div>
               </li>
               
@@ -70,8 +69,8 @@ const PediatricTherapySection = () => {
                   </svg>
                 </div>
                 <div>
-                  <span className="font-medium text-gray-800">Relationship-Driven:</span>
-                  <span className="text-gray-600"> Deep collaboration and partnership drives exceptional outcomes for children and a better experience for their families.</span>
+                  <span className="font-medium text-gray-800"> Family-Friendly Approach:</span>
+                  <span className="text-gray-600"> We work closely with families to build strong relationships and create better health outcomes for children.</span>
                 </div>
               </li>
             </ul>

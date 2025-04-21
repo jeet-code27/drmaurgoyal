@@ -19,25 +19,21 @@ const AboutMission = () => {
               <span className="block">Change the world.</span>
             </h2>
             
-            <div className="mb-10">
+            <div className="mb-10 text-justify">
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">Our Purpose</h2>
               <p className="text-gray-700 mb-5">
-                Our purpose is to change lives by delivering and increasing access to 
-                exceptional care. We are determined to build the best children's health
-                organization in the world.
+              We are here to make a real difference in the lives of children and families. Our goal is to provide the highest quality care and make it easily available to everyone. We are working every day to become the leading children’s health organization in the India.
               </p>
               <p className="text-gray-700">
-                We will do this by creating an unparalleled environment where the best
-                people want to grow.
+              We will do this by creating an unparalleled environment where the best
+              people want to grow.
               </p>
             </div>
             
-            <div>
+            <div className='text-justify'>
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">Our Vision</h2>
               <p className="text-gray-700">
-                We will build the best children's health organization in the world,
-                providing integrated care that meets the needs of children and families
-                exactly where they are.
+              To become the best children’s healthcare provider, offering complete and personalized care for every child—right where families need it most.
               </p>
             </div>
             
