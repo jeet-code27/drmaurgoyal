@@ -58,7 +58,9 @@ const Navbar = () => {
       href: "/resources",
       dropdownItems: [
         { title: "Blog", description: "Articles and information for parents", href: "/blog" },
-        { title: "FAQ", description: "Answers to common questions", href: "/faq" }
+        { title: "FAQ", description: "Answers to common questions", href: "/faq" },
+        { title: "Testimonials", description: "Stories of hope, healing, and happiness from our little patients and their parents", href: "/testimonials" },
+
       ]
     },
     {
