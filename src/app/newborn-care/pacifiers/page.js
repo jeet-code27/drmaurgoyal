@@ -339,7 +339,7 @@ const PacifierGuide = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-gray-800 mb-2">2. The &quot;Lost&quot; Pacifier</h4>
-                  <p className="text-gray-700">"Oops, we can&apos;t find it!&quot; and don&apos;t replace immediately</p>
+                  <p className="text-gray-700">&quot;Oops, we can&apos;t find it!&quot; and don&apos;t replace immediately</p>
                 </div>
                 <div>
                   <h4 className="font-medium text-gray-800 mb-2">3. Pacifier Fairy</h4>
