@@ -64,6 +64,10 @@ const Navbar = () => {
       ]
     },
     {
+      title: "Newborn Care",
+      href: "/newborn-care",
+    },
+    {
       title: "About",
       href: "/about-us",
     }
@@ -106,7 +110,7 @@ const Navbar = () => {
             {/* Logo - MODIFIED: increased size, removed gradient background, fixed image format issues */}
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="flex items-center">
-                <div className="h-16 w-16 md:h-20 md:w-20 relative">
+                <div className="h-20 w-20 md:h-26 md:w-26 relative">
                   <Image 
                     src="/images/mayurchildcare.png" 
                     alt="Mayur Child Care Center Logo" 
@@ -117,11 +121,11 @@ const Navbar = () => {
                     unoptimized={true}
                   />
                 </div>
-                <div className="ml-2 md:ml-3">
-                  <h2 className="text-sm md:text-lg font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+                <div className="ml-1">
+                  <h2 className="text-sm md:text-lg font-bold bg-gradient-to-r from-[#00bcd4] via-[#9c27b0] to-[#e50087] bg-clip-text text-transparent">
                     Mayur Child Care Center
                   </h2>
-                  <p className="text-xs text-gray-600 hidden sm:block">Nurturing young minds with care</p>
+
                 </div>
               </Link>
             </div>
