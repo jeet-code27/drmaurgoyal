@@ -216,9 +216,9 @@ const SwaddleGuide = () => {
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
                 <li><strong>Always</strong> place swaddled babies on their back to sleep</li>
                 <li>Ensure the swaddle allows for hip movement (hips should be able to bend up and out)</li>
-                <li>Check baby's temperature frequently - overheating increases SIDS risk</li>
+                <li>Check baby&apos;s temperature frequently - overheating increases SIDS risk</li>
                 <li>The swaddle should be snug around arms but loose around hips and legs</li>
-                <li>Never cover baby's head or face with the swaddle blanket</li>
+                <li>Never cover baby&apos;s head or face with the swaddle blanket</li>
                 <li>Stop swaddling immediately if baby shows any signs of rolling</li>
               </ul>
             </div>

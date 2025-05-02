@@ -163,7 +163,7 @@ const CommonConditionsGuide = () => {
               Common Newborn Conditions
             </h1>
             <p className="text-lg text-gray-600 mb-6">
-              Understanding what's normal and when to seek help
+              Understanding what&apos;s normal and when to seek help
             </p>
             <div className="bg-blue-100 border-l-4 border-blue-500 p-4 rounded-r-lg mb-8">
               <p className="text-gray-800">
@@ -204,7 +204,7 @@ const CommonConditionsGuide = () => {
               <ul className="list-disc pl-5 space-y-2 mb-6">
                 <li>About 60% of newborns develop some form of harmless skin condition</li>
                 <li>Hormonal changes from mother can cause temporary effects lasting weeks</li>
-                <li>Reflexes and nervous system immaturity cause many "strange" behaviors</li>
+                <li>Reflexes and nervous system immaturity cause many &quot;strange&quot; behaviors</li>
                 <li>Most birthmarks fade significantly by age 2</li>
               </ul>
             </div>
@@ -319,13 +319,13 @@ const CommonConditionsGuide = () => {
                 </p>
               </div>
               <div className="bg-purple-50 p-6 rounded-lg border border-purple-100">
-                <h3 className="font-semibold text-lg text-gray-900 mb-3">Q: My newborn's eyes sometimes cross or wander - is this normal?</h3>
+                <h3 className="font-semibold text-lg text-gray-900 mb-3">Q: My newborn&apos;s eyes sometimes cross or wander - is this normal?</h3>
                 <p className="text-gray-700">
                   Yes, intermittent crossing or wandering is normal until about 4 months as eye muscles strengthen. Consistent crossing after 6 months or inability to track objects by 3 months should be evaluated.
                 </p>
               </div>
               <div className="bg-purple-50 p-6 rounded-lg border border-purple-100">
-                <h3 className="font-semibold text-lg text-gray-900 mb-3">Q: What's the difference between baby acne and a rash?</h3>
+                <h3 className="font-semibold text-lg text-gray-900 mb-3">Q: What&apos;s the difference between baby acne and a rash?</h3>
                 <p className="text-gray-700">
                   Baby acne appears as small red bumps, often with whiteheads, primarily on face. Rashes typically cover larger areas, may have different textures (raised, scaly, blistery), and often spread. Heat rash has tiny red spots in skin folds. When in doubt, photograph and consult your pediatrician.
                 </p>

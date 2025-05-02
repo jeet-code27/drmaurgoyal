@@ -201,7 +201,7 @@ const DecodingCryGuide = () => {
             variants={itemVariants}
           >
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-              Decoding Your Baby's Cry
+              Decoding Your Baby&apos;s Cry
             </h1>
             <p className="text-lg text-gray-600 mb-6">
               Understanding different cry types and effective soothing techniques
@@ -244,9 +244,9 @@ const DecodingCryGuide = () => {
               </p>
               <ul className="list-disc pl-5 space-y-2 mb-6">
                 <li>Newborns cry an average of 2 hours daily (peaking at 6-8 weeks)</li>
-                <li>Hunger cries have a "neh" sound from sucking reflex</li>
+                <li>Hunger cries have a &quot;neh&quot; sound from sucking reflex</li>
                 <li>Pain cries trigger stronger physiological response in listeners</li>
-                <li>Mothers' brains become wired to respond to their baby's unique cry</li>
+                <li>Mothers brains become wired to respond to their baby&apos;s unique cry</li>
               </ul>
               <div className={`${colors.accentLight} border-l-4 ${colors.accentBorder} p-4 rounded-r-lg`}>
                 <p className="text-gray-800">
@@ -434,7 +434,7 @@ const DecodingCryGuide = () => {
                   <ul className="list-disc pl-5 space-y-2 text-gray-700">
                     <li>Take turns with partner every 30 minutes</li>
                     <li>Use noise-canceling headphones if needed</li>
-                    <li>Remember: Crying doesn't mean bad parenting</li>
+                    <li>Remember: Crying doesn&apos;t mean bad parenting</li>
                     <li>Place baby safely in crib if you need a break</li>
                   </ul>
                 </div>

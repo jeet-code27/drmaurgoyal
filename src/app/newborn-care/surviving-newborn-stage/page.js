@@ -194,7 +194,7 @@ const NewbornSurvivalGuide = () => {
               10 Lifesaving Tips for Surviving the Newborn Stage
             </h1>
             <p className="text-lg text-gray-600 mb-6">
-              Practical strategies from parents who've been there
+              Practical strategies from parents who&apos;ve been there
             </p>
             <div className={`${colors.primaryLight} border-l-4 ${colors.primaryBorder} p-4 rounded-r-lg mb-8`}>
               <p className="text-gray-800">
@@ -274,7 +274,7 @@ const NewbornSurvivalGuide = () => {
             <div className={`${colors.primaryLight} p-6 rounded-lg border ${colors.primaryBorder} mt-8`}>
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Pro Tip: The 10% Rule</h3>
               <p className="text-gray-700">
-                Only 10% of baby products marketed as "essential" truly are. Borrow or buy secondhand first - you'll discover what actually works for YOUR baby. The $300 bassinet isn't necessarily better than the $100 one.
+                Only 10% of baby products marketed as &quot;essential&quot; truly are. Borrow or buy secondhand first - you&apos;ll discover what actually works for YOUR baby. The $300 bassinet isn&apos;t necessarily better than the $100 one.
               </p>
             </div>
           </motion.div>
@@ -330,7 +330,7 @@ const NewbornSurvivalGuide = () => {
             <div className={`${colors.accentLight} p-6 rounded-lg border ${colors.accentBorder} mt-8`}>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Remember: You Know Your Baby Best</h3>
               <p className="text-gray-700">
-                Never hesitate to call about concerns, even if not on this list. Pediatric staff expect 10-20 calls in the first month - you won't bother them. Better safe than sorry with newborns.
+                Never hesitate to call about concerns, even if not on this list. Pediatric staff expect 10-20 calls in the first month - you won&apos;t bother them. Better safe than sorry with newborns.
               </p>
             </div>
           </motion.div>
@@ -345,7 +345,7 @@ const NewbornSurvivalGuide = () => {
               The days are long but the years are short. What feels impossible now will become routine in just weeks. One hour at a time.
             </p>
             <div className="text-purple-200 text-sm">
-              <p>Parenting mantra: "This is a phase. This is temporary. We can do hard things."</p>
+              <p>Parenting mantra: &quot;This is a phase. This is temporary. We can do hard things.&quot;</p>
             </div>
           </motion.div>
 
@@ -365,8 +365,8 @@ const NewbornSurvivalGuide = () => {
               <div className={`${colors.secondaryLight} p-6 rounded-lg border ${colors.secondaryBorder}`}>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">For Emotional Survival</h3>
                 <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                  <li>Take daily "proof of life" photos - you'll want them later</li>
-                  <li>Text other new parents - you're not alone</li>
+                  <li>Take daily &quot;proof of life&quot; photos - you&apos;ll want them later</li>
+                  <li>Text other new parents - you&apos;re not alone</li>
                   <li>Remember: fed is best, safe sleep is flexible, and love matters more than perfection</li>
                 </ul>
               </div>

@@ -213,7 +213,7 @@ const PacifierGuide = () => {
               
               <div className={`${colors.accentLight} border-l-4 ${colors.accentBorder} p-4 rounded-r-lg`}>
                 <p className="text-gray-800">
-                  <span className="font-semibold">Key fact:</span> Pacifier use should be baby-led - never forced. About 70-85% of Western babies use pacifiers, but they're less common in some other cultures.
+                  <span className="font-semibold">Key fact:</span> Pacifier use should be baby-led - never forced. About 70-85% of Western babies use pacifiers, but they&apos;re less common in some other cultures.
                 </p>
               </div>
             </div>
@@ -272,23 +272,23 @@ const PacifierGuide = () => {
             <div className={`${colors.secondaryLight} p-6 rounded-lg border ${colors.secondaryBorder}`}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Do's</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Do&apos;s</h3>
                   <ul className="list-disc pl-5 space-y-2 text-gray-700">
                     <li>Choose one-piece construction</li>
-                    <li>Use proper size for baby's age</li>
+                    <li>Use proper size for baby&apos;s age</li>
                     <li>Clean regularly with soap and water</li>
                     <li>Replace every 4-8 weeks</li>
                     <li>Store in clean, dry container</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Don'ts</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Don&apos;ts</h3>
                   <ul className="list-disc pl-5 space-y-2 text-gray-700">
                     <li>Never modify or repair a pacifier</li>
                     <li>Avoid decorative pacifiers with small parts</li>
-                    <li>Don't dip in sweet substances</li>
+                    <li>Don&apos;t dip in sweet substances</li>
                     <li>Avoid pacifiers with liquid/gel filling</li>
-                    <li>Don't force baby to take it</li>
+                    <li>Don&apos;t force baby to take it</li>
                   </ul>
                 </div>
               </div>
@@ -338,12 +338,12 @@ const PacifierGuide = () => {
                   <p className="text-gray-700">Only allow at sleep times, then just naps, then just bedtime</p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-800 mb-2">2. The "Lost" Pacifier</h4>
-                  <p className="text-gray-700">"Oops, we can't find it!" and don't replace immediately</p>
+                  <h4 className="font-medium text-gray-800 mb-2">2. The &quot;Lost&quot; Pacifier</h4>
+                  <p className="text-gray-700">"Oops, we can&apos;t find it!&quot; and don&apos;t replace immediately</p>
                 </div>
                 <div>
                   <h4 className="font-medium text-gray-800 mb-2">3. Pacifier Fairy</h4>
-                  <p className="text-gray-700">Trade pacifiers for a special gift from the "Pacifier Fairy"</p>
+                  <p className="text-gray-700">Trade pacifiers for a special gift from the &quot;Pacifier Fairy&quot;</p>
                 </div>
               </div>
             </div>

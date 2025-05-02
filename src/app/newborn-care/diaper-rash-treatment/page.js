@@ -203,7 +203,7 @@ const DiaperRashGuide = () => {
               </ul>
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
                 <p className="text-gray-800">
-                  <span className="font-semibold">When to worry:</span> If rash doesn't improve in 2-3 days, spreads beyond diaper area, or includes pus-filled blisters, consult your pediatrician.
+                  <span className="font-semibold">When to worry:</span> If rash doesn&apos;t improve in 2-3 days, spreads beyond diaper area, or includes pus-filled blisters, consult your pediatrician.
                 </p>
               </div>
             </div>
@@ -352,9 +352,9 @@ const DiaperRashGuide = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Diaper Rash FAQs</h2>
             <div className="space-y-4">
               <div className="bg-blue-50 p-6 rounded-lg border border-blue-100">
-                <h3 className="font-semibold text-lg text-gray-900 mb-3">Q: How can I tell if it's a yeast infection vs regular diaper rash?</h3>
+                <h3 className="font-semibold text-lg text-gray-900 mb-3">Q: How can I tell if it&apos;s a yeast infection vs regular diaper rash?</h3>
                 <p className="text-gray-700">
-                  <span className="font-medium">Yeast infections:</span> Bright red with distinct borders, satellite lesions outside main area, doesn't respond to typical creams, often after antibiotic use. 
+                  <span className="font-medium">Yeast infections:</span> Bright red with distinct borders, satellite lesions outside main area, doesn&apos;t respond to typical creams, often after antibiotic use. 
                   <span className="font-medium block mt-2">Regular rash:</span> More diffuse redness, improves with standard treatments, limited to diaper contact areas.
                 </p>
               </div>

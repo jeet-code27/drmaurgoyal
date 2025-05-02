@@ -115,7 +115,7 @@ const FirstBathGuide = () => {
             variants={itemVariants}
           >
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-              Baby's First Bath
+              Baby&apos;s First Bath
             </h1>
             <p className="text-lg text-gray-600 mb-6">
               A gentle, stress-free guide to bathing your newborn safely
@@ -154,7 +154,7 @@ const FirstBathGuide = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Newborn Bathing Basics</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <p className="mb-6">
-                A baby's first bath is a special milestone that requires careful preparation. Newborns lose body heat quickly, so baths should be brief (5-10 minutes) and efficient. The American Academy of Pediatrics recommends:
+                A baby&apos;s first bath is a special milestone that requires careful preparation. Newborns lose body heat quickly, so baths should be brief (5-10 minutes) and efficient. The American Academy of Pediatrics recommends:
               </p>
               <ul className="list-disc pl-5 space-y-2 mb-6">
                 <li>Sponge baths until umbilical cord stump falls off (1-3 weeks)</li>
@@ -265,8 +265,8 @@ const FirstBathGuide = () => {
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
                 <li><strong>Never</strong> leave baby unattended - drowning can occur in 1 inch of water</li>
                 <li>Avoid bath seats - they create false security and are drowning hazards</li>
-                <li>Check water temperature every time - babies' skin burns more easily than adults'</li>
-                <li>Don't use cotton swabs to clean ears - just wipe outer ear with washcloth</li>
+                <li>Check water temperature every time - babies&apos; skin burns more easily than adults</li>
+                <li>Don&apos;t use cotton swabs to clean ears - just wipe outer ear with washcloth</li>
                 <li>If umbilical cord is still attached, sponge bath only and keep area dry</li>
               </ul>
             </div>
@@ -297,7 +297,7 @@ const FirstBathGuide = () => {
                   Comfort Tips
                 </h3>
                 <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                  <li>Place warm washcloth on baby's tummy during bath</li>
+                  <li>Place warm washcloth on baby&apos;s tummy during bath</li>
                   <li>Sing or talk softly to keep baby calm</li>
                   <li>Keep room warm (75-78°F) to prevent chills</li>
                 </ul>

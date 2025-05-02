@@ -208,7 +208,7 @@ const RoomTemperatureGuide = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Why Room Temperature Matters</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <p className="mb-6">
-                Babies, especially newborns, can't regulate their body temperature as effectively as adults. Research shows:
+                Babies, especially newborns, can&apos;t regulate their body temperature as effectively as adults. Research shows:
               </p>
               <ul className="list-disc pl-5 space-y-2 mb-6">
                 <li>Overheating increases SIDS risk by up to 4.5 times</li>
@@ -218,7 +218,7 @@ const RoomTemperatureGuide = () => {
               </ul>
               <div className={`${colors.accentLight} border-l-4 ${colors.accentBorder} p-4 rounded-r-lg`}>
                 <p className="text-gray-800">
-                  <span className="font-semibold">Key fact:</span> A baby's room temperature is more critical than outdoor temperature since they spend 16-20 hours/day sleeping.
+                  <span className="font-semibold">Key fact:</span> A baby&apos;s room temperature is more critical than outdoor temperature since they spend 16-20 hours/day sleeping.
                 </p>
               </div>
             </div>

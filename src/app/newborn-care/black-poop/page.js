@@ -183,13 +183,13 @@ const BlackPoopGuide = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Newborn Stool Development</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <p className="mb-6">
-                A baby's stool undergoes dramatic changes in the first week of life. The American Academy of Pediatrics states that:
+                A baby&apos;s stool undergoes dramatic changes in the first week of life. The American Academy of Pediatrics states that:
               </p>
               <ul className="list-disc pl-5 space-y-2 mb-6">
                 <li>All newborns should pass meconium within 24-48 hours after birth</li>
                 <li>Transition to yellowish stools should occur by day 4-5</li>
                 <li>Stool frequency varies from 10x/day (breastfed) to 1x every few days (formula-fed)</li>
-                <li>Color changes alone aren't diagnostic without other symptoms</li>
+                <li>Color changes alone aren&apos;t diagnostic without other symptoms</li>
               </ul>
               <div className={`${colors.accentLight} border-l-4 ${colors.accentBorder} p-4 rounded-r-lg`}>
                 <p className="text-gray-800">

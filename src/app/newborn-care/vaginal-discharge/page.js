@@ -107,7 +107,7 @@ const VaginalDischargeGuide = () => {
               Vaginal Discharge in Babies
             </h1>
             <p className="text-lg text-gray-600 mb-6">
-              Understanding what's normal and when to seek help
+              Understanding what&apos;s normal and when to seek help
             </p>
             <div className="bg-pink-100 border-l-4 border-pink-500 p-4 rounded-r-lg mb-8">
               <p className="text-gray-800">
@@ -143,7 +143,7 @@ const VaginalDischargeGuide = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Newborn Vaginal Discharge Basics</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <p className="mb-6">
-                Vaginal discharge in newborn girls is a common and typically harmless occurrence caused by exposure to maternal hormones in the womb. This discharge, sometimes called "pseudomenses," is the body's natural response to the withdrawal of these hormones after birth.
+                Vaginal discharge in newborn girls is a common and typically harmless occurrence caused by exposure to maternal hormones in the womb. This discharge, sometimes called &quot;pseudomenses,&quot; is the body&apos;s natural response to the withdrawal of these hormones after birth.
               </p>
               <ul className="list-disc pl-5 space-y-2 mb-6">
                 <li>Occurs in about 1 in 4 female newborns</li>
