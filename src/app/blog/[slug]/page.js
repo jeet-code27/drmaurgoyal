@@ -28,7 +28,7 @@ export async function generateMetadata({ params }) {
   }
   
   return {
-    title: `${blog.title} | Dr. Abhishek Saxena`,
+    title: `${blog.title}`,
     description: blog.metaDescription || blog.excerpt || blog.content.substring(0, 160),
     openGraph: {
       title: blog.title,

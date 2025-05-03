@@ -78,7 +78,9 @@ export default function Home() {
     <hr className="text-[#1018281f]"/>
     <ImageGallerySlider/>
     <hr className="text-[#1018281f]"/>
+    <div className="bg-white">
     <FAQSection/>
+    </div>
   </div>
   );
 }

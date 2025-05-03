@@ -69,7 +69,9 @@ export default function AboutUs() {
       <hr className="text-[#1018281f]"/>
       <AboutMission />
       <hr className="text-[#1018281f]"/>
+      <div className="bg-white">
       <AboutCoreValues/>
+      </div>
       <hr className="text-[#1018281f]"/>
       <CarePartnerComponent/>
     </>
