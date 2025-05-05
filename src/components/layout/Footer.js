@@ -17,16 +17,19 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Logo and Description */}
           <div className="col-span-1 flex flex-col items-center md:items-start">
-            <div className="mb-5">
+            <div className="mb-2 flex items-center">
               <Link href="/" className="inline-block">
                 <Image 
                   src="/images/mayurchildcare.png" 
                   alt="Mayur Child Care Center Logo" 
                   width={160} 
                   height={60}
-                  className="h-30 w-auto"
+                  className="mg:h-38 h-full w-auto"
                 />
               </Link>
+              <h2 className=" mg:text-2xl text-xl font-semibold bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">
+                Mayur Child Care Center
+              </h2>
             </div>
             <p className="text-gray-300 text-center md:text-left mb-6 leading-relaxed">
               Nurturing minds, fostering growth, and creating a safe haven for your children to learn, play, and thrive in our green sanctuary of learning.

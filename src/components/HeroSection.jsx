@@ -108,13 +108,15 @@ const HeroSection = () => {
               className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6"
               variants={itemVariants}
             >
-              Mayur Child Care Center is changing lives, one child at a time
+             Specialized Care for Children in Ajmer – Mayur Child Care Center
             </motion.h2>
             <motion.p 
               className="text-lg text-gray-700 mb-6"
               variants={itemVariants}
             >
-              Mayur Child Care Center in Ajmer is dedicated to children's health. We've been helping kids for more than 7 years. <span className="font-bold">Our goal is to give every child the care they need to grow healthy and happy.</span>
+            Mayur Child Care Center is one of the best child care centers in Ajmer, trusted by families for over 7 years.
+We are dedicated to providing safe, gentle, and expert care to children of all ages.
+<span className="font-bold">Our goal is to support every child’s healthy and happy growth with the care they truly deserve.</span>
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 mt-8"

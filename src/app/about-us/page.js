@@ -26,7 +26,7 @@ export const metadata = {
       {
         url: '/images/about-clinic.jpg',
         width: 800,
-        height: 600,
+        height: 600,  
         alt: 'Mayur Child Care Center',
       },
     ],

@@ -121,8 +121,8 @@ const Navbar = () => {
                     unoptimized={true}
                   />
                 </div>
-                <div className="ml-1">
-                  <h2 className="text-sm md:text-lg font-bold bg-gradient-to-r from-[#00bcd4] via-[#9c27b0] to-[#e50087] bg-clip-text text-transparent">
+                <div className="">
+                  <h2 className="text-lg md:text-xl font-bold bg-gradient-to-r from-[#00bcd4] via-[#9c27b0] to-[#e50087] bg-clip-text text-transparent">
                     Mayur Child Care Center
                   </h2>
 
