@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="absolute bottom-1/4 right-1/4 w-20 h-20 rounded-full bg-teal-400/5"></div>
       
       <div className="container mx-auto px-4 py-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Description */}
           <div className="col-span-1 flex flex-col items-center md:items-start">
             <div className="mb-2 flex items-center">
@@ -22,12 +22,12 @@ const Footer = () => {
                 <Image 
                   src="/images/mayurchildcare.png" 
                   alt="Mayur Child Care Center Logo" 
-                  width={160} 
-                  height={60}
+                  width={140} 
+                  height={50}
                   className="mg:h-38 h-full w-auto"
                 />
               </Link>
-              <h2 className=" mg:text-2xl text-xl font-semibold bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">
+              <h2 className="text-lg md:text-xl lg:text-2xl font-semibold bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent whitespace-nowrap">
                 Mayur Child Care Center
               </h2>
             </div>
@@ -47,51 +47,48 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links with cute icons */}
-          <div className="col-span-1">
-            <h3 className="text-xl font-bold mb-6 text-center md:text-left relative">
+          {/* Quick Links with cute icons - centered on all screen sizes */}
+          <div className="col-span-1 flex flex-col items-center">
+            <h3 className="text-xl font-bold mb-6 relative">
               <span className="relative z-10 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">Explore</span>
-              <span className="absolute bottom-0 left-0 h-1 w-16 bg-gradient-to-r from-green-400 to-teal-500 hidden md:block"></span>
+              <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-1 w-16 bg-gradient-to-r from-green-400 to-teal-500"></span>
             </h3>
-            <ul className="space-y-3 text-center md:text-left">
+            <ul className="space-y-3 text-left">
               <li>
-                <Link href="/" className="text-gray-300 hover:text-green-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
+                <Link href="/" className="text-gray-300 hover:text-green-400 transition-colors duration-300 flex items-left justify-left group">
                   <span className="mr-2 text-green-400 group-hover:scale-125 transition-transform duration-300">•</span> Home
                 </Link>
               </li>
               <li>
-                <Link href="/about-us" className="text-gray-300 hover:text-green-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
+                <Link href="/about-us" className="text-gray-300 hover:text-green-400 transition-colors duration-300 flex items-left justify-left group">
                   <span className="mr-2 text-green-400 group-hover:scale-125 transition-transform duration-300">•</span> About Us
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
+                <Link href="/services" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-left justify-left group">
                   <span className="mr-2 text-emerald-400 group-hover:scale-125 transition-transform duration-300">•</span> Services
                 </Link>
               </li>
-             
-             
               <li>
-                <Link href="/blog" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
+                <Link href="/blog" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-left justify-left group">
                   <span className="mr-2 text-emerald-400 group-hover:scale-125 transition-transform duration-300">•</span> Blogs
                 </Link>
               </li>
               <li>
-                <Link href="/locations" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
+                <Link href="/locations" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-left justify-left group">
                   <span className="mr-2 text-emerald-400 group-hover:scale-125 transition-transform duration-300">•</span> Location
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
+                <Link href="/faq" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-left justify-left group">
                   <span className="mr-2 text-emerald-400 group-hover:scale-125 transition-transform duration-300">•</span> FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/bookconsultation" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-center justify-center md:justify-start group">
+                <Link href="/bookconsultation" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-left justify-left group">
                   <span className="mr-2 text-emerald-400 group-hover:scale-125 transition-transform duration-300">•</span> Book Consultation
                 </Link>
               </li>
-              
             </ul>
           </div>
 
@@ -102,7 +99,7 @@ const Footer = () => {
               <span className="absolute bottom-0 left-0 h-1 w-16 bg-gradient-to-r from-teal-400 to-emerald-500 hidden md:block"></span>
             </h3>
             <div className="space-y-4 text-gray-300">
-              <div className="flex items-center justify-center md:justify-start">
+              <div className="flex items-center justify-left md:justify-start">
                 <div className="bg-gradient-to-r from-emerald-500 to-green-600 p-2 rounded-full mr-3 shadow-md">
                   <MapPin size={18} className="text-white" />
                 </div>
@@ -111,13 +108,13 @@ const Footer = () => {
                   <p className="text-gray-300">Ajmer,  Rajasthan,  305001</p>
                 </div>
               </div>
-              <div className="flex items-center justify-center md:justify-start">
+              <div className="flex items-left justify-left md:justify-start">
                 <div className="bg-gradient-to-r from-green-500 to-teal-500 p-2 rounded-full mr-3 shadow-md">
                   <Phone size={18} className="text-white" />
                 </div>
                 <p className="text-white">8955966990</p>
               </div>
-              <div className="flex items-center justify-center md:justify-start">
+              <div className="flex items-left justify-left md:justify-start">
                 <div className="bg-gradient-to-r from-teal-500 to-emerald-600 p-2 rounded-full mr-3 shadow-md">
                   <Mail size={18} className="text-white" />
                 </div>
@@ -128,7 +125,7 @@ const Footer = () => {
                 <p className="text-gray-200">Monday - Saturday: <span className="text-white"></span></p>
                 <p className="text-gray-200">Schedule-1: <span className="text-white">9:00 AM - 10:00 AM</span></p>
                 <p className="text-gray-200">Schedule-2: <span className="text-white">5:00 PM - 8:00 PM</span></p>
-               <p className="text-gray-200">Sunday: <span className="text-white">11:00 AM - 1:00 PM</span></p>
+                <p className="text-gray-200">Sunday: <span className="text-white">11:00 AM - 1:00 PM</span></p>
               </div>
             </div>
           </div>
