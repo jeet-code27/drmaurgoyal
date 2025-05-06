@@ -131,7 +131,7 @@ const DoctorProfileSection = () => {
                 animate={imageInView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
                 transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
               >
-                <p className="font-bold text-2xl">7+ Years</p>
+                <p className="font-bold text-2xl">15+ Years</p>
                 <p className="text-sm">Experience</p>
               </motion.div>
             </div>

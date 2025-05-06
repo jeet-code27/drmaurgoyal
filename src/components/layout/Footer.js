@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Facebook, Instagram, Youtube, Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -35,14 +35,30 @@ const Footer = () => {
               Nurturing minds, fostering growth, and creating a safe haven for your children to learn, play, and thrive in our green sanctuary of learning.
             </p>
             <div className="flex space-x-4 mb-6">
-              <a href="https://www.facebook.com/people/Mayur-Child-Care-Center/100089743385413/" target='_blank' className="bg-gradient-to-r from-emerald-500 to-green-600 hover:opacity-90 p-2 rounded-full transition-all duration-300 shadow-lg shadow-green-900/30" aria-label="Facebook">
-                <Facebook size={20} className="text-white" />
+              {/* Social Media Icons - Using custom PNG images */}
+              <a href="https://www.facebook.com/people/Mayur-Child-Care-Center/100089743385413/" target='_blank' className="hover:opacity-90 transition-all duration-300" aria-label="Facebook">
+                <Image 
+                  src="/images/social/facebook.png" 
+                  alt="Facebook" 
+                  width={36} 
+                  height={36}
+                />
               </a>
-              <a href="https://instagram.com/mayur_child_care_center" target='_blank' className="bg-gradient-to-r from-green-500 to-teal-500 hover:opacity-90 p-2 rounded-full transition-all duration-300 shadow-lg shadow-green-900/30" aria-label="Instagram">
-                <Instagram size={20} className="text-white" />
+              <a href="https://instagram.com/mayur_child_care_center" target='_blank' className="hover:opacity-90 transition-all duration-300" aria-label="Instagram">
+                <Image 
+                  src="/images/social/instagram.png" 
+                  alt="Instagram" 
+                  width={36} 
+                  height={36}
+                />
               </a>
-              <a href="https://www.youtube.com/@mayurchildcarecenter-official" target='_blank' className="bg-gradient-to-r from-teal-500 to-emerald-600 hover:opacity-90 p-2 rounded-full transition-all duration-300 shadow-lg shadow-green-900/30" aria-label="YouTube">
-                <Youtube size={20} className="text-white" />
+              <a href="https://www.youtube.com/@mayurchildcarecenter-official" target='_blank' className="hover:opacity-90 transition-all duration-300" aria-label="YouTube">
+                <Image 
+                  src="/images/social/youtube.png" 
+                  alt="YouTube" 
+                  width={36} 
+                  height={36}
+                />
               </a>
             </div>
           </div>
@@ -76,7 +92,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="/locations" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-left justify-left group">
-                  <span className="mr-2 text-emerald-400 group-hover:scale-125 transition-transform duration-300">•</span> Location
+                  <span className="mr-2 text-emerald-400 group-hover:scale-125 transition-transform duration-300">•</span> Contact Us
                 </Link>
               </li>
               <li>
@@ -98,10 +114,15 @@ const Footer = () => {
               <span className="relative z-10 bg-gradient-to-r from-teal-400 to-emerald-500 bg-clip-text text-transparent">Get in Touch</span>
               <span className="absolute bottom-0 left-0 h-1 w-16 bg-gradient-to-r from-teal-400 to-emerald-500 hidden md:block"></span>
             </h3>
-            <div className="space-y-4 text-gray-300">
+            <div className="space-y-3 text-gray-300">
               <div className="flex items-center justify-left md:justify-start">
-                <div className="bg-gradient-to-r from-emerald-500 to-green-600 p-2 rounded-full mr-3 shadow-md">
-                  <MapPin size={18} className="text-white" />
+                <div className="rounded-full mr-3 shadow-md">
+                <Image 
+                  src="/images/social/google-maps.png" 
+                  alt="google-maps" 
+                  width={32} 
+                  height={32}
+                />
                 </div>
                 <div>
                   <p className="text-white">B 15, Aravali Vihar, Near Lions Club, Vaishali Nagar,</p>
@@ -109,23 +130,33 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-left justify-left md:justify-start">
-                <div className="bg-gradient-to-r from-green-500 to-teal-500 p-2 rounded-full mr-3 shadow-md">
-                  <Phone size={18} className="text-white" />
+                <div className="rounded-full mr-3 shadow-md">
+                <Image 
+                  src="/images/social/telephone.png" 
+                  alt="telephone" 
+                  width={32} 
+                  height={32}
+                />
                 </div>
-                <p className="text-white">8955966990</p>
+                <p className="text-white">+91 89559 66990</p>
               </div>
               <div className="flex items-left justify-left md:justify-start">
-                <div className="bg-gradient-to-r from-teal-500 to-emerald-600 p-2 rounded-full mr-3 shadow-md">
-                  <Mail size={18} className="text-white" />
+                <div className="rounded-full mr-3 shadow-md">
+                <Image 
+                  src="/images/social/google.png" 
+                  alt="Gmail" 
+                  width={36} 
+                  height={36}
+                />
                 </div>
                 <p className="text-white">mayurchildrenhospital@gmail.com</p>
               </div>
               <div className="mt-6 text-center md:text-left p-4 rounded-lg bg-[#1d2e2b] backdrop-blur-sm">
                 <div className="mb-2 font-medium text-white bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">Hours of Operation:</div>
                 <p className="text-gray-200">Monday - Saturday: <span className="text-white"></span></p>
-                <p className="text-gray-200">Schedule-1: <span className="text-white">9:00 AM - 10:00 AM</span></p>
-                <p className="text-gray-200">Schedule-2: <span className="text-white">5:00 PM - 8:00 PM</span></p>
-                <p className="text-gray-200">Sunday: <span className="text-white">11:00 AM - 1:00 PM</span></p>
+                <p className="text-gray-200">Morning: <span className="text-white">9:00 AM - 12:00 AM</span></p>
+                <p className="text-gray-200">Evening: <span className="text-white">5:00 PM - 8:30 PM</span></p>
+                <p className="text-gray-200">Sunday: <span className="text-white">10:00 AM - 2:00 PM</span></p>
               </div>
             </div>
           </div>

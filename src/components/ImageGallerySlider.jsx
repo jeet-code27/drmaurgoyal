@@ -45,7 +45,7 @@ const ImageGallerySlider = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1024 },
-      items: 3
+      items: 2  // Reduced from 3 to 2 for larger images
     },
     desktop: {
       breakpoint: { max: 1024, min: 768 },
@@ -53,7 +53,7 @@ const ImageGallerySlider = () => {
     },
     tablet: {
       breakpoint: { max: 768, min: 464 },
-      items: 2
+      items: 1  // Reduced from 2 to 1 for larger images on tablets
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -109,96 +109,96 @@ const ImageGallerySlider = () => {
 
   return (
     <div className='bg-white'>
-    <div className="w-full max-w-7xl mx-auto px-4 py-12 ">
-      <h2 className="text-5xl font-bold mb-8  text-center  bg-gradient-to-r from-teal-500 to-teal-300 pb-2 text-transparent bg-clip-text">
-        Gallery
-      </h2>
+      <div className="w-full max-w-7xl mx-auto px-4 py-16"> {/* Increased vertical padding */}
+        <h2 className="text-6xl font-bold mb-12 text-center bg-gradient-to-r from-teal-500 to-teal-300 pb-2 text-transparent bg-clip-text">
+          Gallery
+        </h2>
 
-      <div className="bg-white rounded-xl shadow-xl p-8 relative">
-        {/* Add a wrapper div with relative positioning */}
-        <div className="relative z-10">
-          <Carousel
-            responsive={responsive}
-            infinite={true}
-            autoPlay={true}
-            autoPlaySpeed={4000}
-            keyBoardControl={true}
-            customTransition="transform 700ms ease-in-out"
-            transitionDuration={700}
-            containerClass="carousel-container"
-            removeArrowOnDeviceType={["mobile"]}
-            dotListClass="custom-dot-list-style"
-            itemClass="px-3"
-          >
-            {images.map((image, index) => (
-              <div
-                key={image.id}
-                className="cursor-pointer transform transition-all duration-300 hover:scale-105"
-                onClick={() => openLightbox(image, index)}
-              >
-                <div className="relative overflow-hidden rounded-xl shadow-lg bg-white">
-                  <img
-                    src={image.url}
-                    alt={image.title}
-                    className="w-full h-72 object-cover"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent text-white p-6">
-                    <h3 className="text-xl font-bold mb-2">{image.title}</h3>
-                    <p className="text-sm text-gray-200">{image.description}</p>
+        <div className="bg-white rounded-xl shadow-xl p-10 relative"> {/* Increased padding */}
+          {/* Add a wrapper div with relative positioning */}
+          <div className="relative z-10">
+            <Carousel
+              responsive={responsive}
+              infinite={true}
+              autoPlay={true}
+              autoPlaySpeed={4000}
+              keyBoardControl={true}
+              customTransition="transform 700ms ease-in-out"
+              transitionDuration={700}
+              containerClass="carousel-container"
+              removeArrowOnDeviceType={["mobile"]}
+              dotListClass="custom-dot-list-style"
+              itemClass="px-6" // Increased horizontal padding for more spacing between slides
+            >
+              {images.map((image, index) => (
+                <div
+                  key={image.id}
+                  className="cursor-pointer transform transition-all duration-300 hover:scale-105"
+                  onClick={() => openLightbox(image, index)}
+                >
+                  <div className="relative overflow-hidden rounded-xl shadow-lg bg-white">
+                    <img
+                      src={image.url}
+                      alt={image.title}
+                      className="w-full h-96 object-contain bg-gray-100" /* Changed height from h-72 to h-96 and object-cover to object-contain to prevent cutting */
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent text-white p-6">
+                      <h3 className="text-xl font-bold mb-2">{image.title}</h3>
+                      <p className="text-sm text-gray-200">{image.description}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </Carousel>
-        </div>
-      </div>
-
-      {isLightboxOpen && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center"
-          onClick={closeLightbox}
-        >
-          {/* Navigation Controls - Updated to have darker background and visible arrows */}
-          <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-gray-800 hover:bg-gray-700 p-2 rounded-full transition-all duration-300"
-            onClick={navigateImage('prev')}
-          >
-            <ChevronLeft className="w-8 h-8 text-green-400" />
-          </button>
-          
-          <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-gray-800 hover:bg-gray-700 p-2 rounded-full transition-all duration-300"
-            onClick={navigateImage('next')}
-          >
-            <ChevronRight className="w-8 h-8 text-green-400" />
-          </button>
-
-          {/* Close Button */}
-          <button
-            className="absolute top-4 right-4 bg-gray-800 hover:bg-gray-700 p-2 rounded-full transition-all duration-300"
-            onClick={closeLightbox}
-          >
-            <X className="w-8 h-8 text-green-400" />
-          </button>
-
-          {/* Image Container */}
-          <div className="relative max-w-5xl w-full mx-4" onClick={(e) => e.stopPropagation()}>
-            <img
-              src={selectedImage.url}
-              alt={selectedImage.title}
-              className="w-full h-auto rounded-xl shadow-2xl"
-            />
-            <div className="text-white text-center mt-6">
-              <h3 className="text-2xl font-bold mb-2">{selectedImage.title}</h3>
-              <p className="text-lg text-gray-300">{selectedImage.description}</p>
-              <p className="text-sm text-gray-400 mt-2">
-                Image {selectedIndex + 1} of {images.length}
-              </p>
-            </div>
+              ))}
+            </Carousel>
           </div>
         </div>
-      )}
-    </div>
+
+        {isLightboxOpen && (
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center"
+            onClick={closeLightbox}
+          >
+            {/* Navigation Controls */}
+            <button
+              className="absolute left-6 top-1/2 -translate-y-1/2 bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-all duration-300" /* Increased size and padding */
+              onClick={navigateImage('prev')}
+            >
+              <ChevronLeft className="w-10 h-10 text-green-400" /> {/* Increased size */}
+            </button>
+            
+            <button
+              className="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-all duration-300" /* Increased size and padding */
+              onClick={navigateImage('next')}
+            >
+              <ChevronRight className="w-10 h-10 text-green-400" /> {/* Increased size */}
+            </button>
+
+            {/* Close Button */}
+            <button
+              className="absolute top-6 right-6 bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-all duration-300" /* Increased size and padding */
+              onClick={closeLightbox}
+            >
+              <X className="w-10 h-10 text-green-400" /> {/* Increased size */}
+            </button>
+
+            {/* Image Container - Made larger */}
+            <div className="relative max-w-6xl w-full mx-6" onClick={(e) => e.stopPropagation()}>
+              <img
+                src={selectedImage.url}
+                alt={selectedImage.title}
+                className="w-full h-auto max-h-screen object-contain rounded-xl shadow-2xl" /* Added max-h-screen and object-contain to ensure image fits properly */
+              />
+              <div className="text-white text-center mt-8"> {/* Increased margin-top */}
+                <h3 className="text-3xl font-bold mb-3">{selectedImage.title}</h3> {/* Increased font size */}
+                <p className="text-xl text-gray-300">{selectedImage.description}</p> {/* Increased font size */}
+                <p className="text-lg text-gray-400 mt-3">
+                  Image {selectedIndex + 1} of {images.length}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

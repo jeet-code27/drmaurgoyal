@@ -82,7 +82,7 @@ const FAQSection = () => {
     },
     {
       question: "What are your operating hours?",
-      answer: "Mayur Child Care Center operates Monday through Saturday in two sessions: 9:00 AM to 10:00 AM and 5:00 PM to 8:00 PM. On Sundays, we're open from 11:00 AM to 1:00 PM."
+      answer: "Mayur Child Care Center operates Monday through Saturday in two sessions: 9:00 AM to 12:00 PM and 5:00 PM to 8:30 PM. On Sundays, we're open from 10:00 AM to 2:00 PM."
     },    
     {
       question: "What is your staff-to-child ratio?",
@@ -90,11 +90,11 @@ const FAQSection = () => {
     },
     {
       question: "What safety measures do you have in place?",
-      answer: "Safety is our top priority at Mayur Child Care Center. We have secure entry systems, regular safety drills, comprehensive background checks for all staff, CPR and First Aid certified teachers, camera monitoring systems, and strict pick-up authorization policies to ensure your child's safety."
-    },
+      answer: "At Mayur Child Care Center, your child's safety is our highest priority. Our hospital is equipped with secure access controls, 24/7 CCTV surveillance, and trained security personnel. We conduct regular emergency drills and maintain strict hygiene and infection control protocols. All medical and support staff undergo rigorous background checks and are certified in pediatric CPR and First Aid. Additionally, we have a secure identification and pick-up process to ensure that only authorized individuals can access your child."
+    }  ,  
     {
       question: "Do you provide progress reports for children?",
-      answer: "Yes, we provide regular progress reports and conduct parent-teacher conferences twice a year. We use developmental assessment tools to track each child's progress and share these insights with parents. Daily updates are also provided through our parent communication app."
+      answer: "Yes, we provide regular progress reports. We track each child's progress and share these insights with parents. Daily updates are also provided to parents."
     }
   ];
 

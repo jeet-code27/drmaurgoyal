@@ -63,7 +63,7 @@ const PatientReviews = () => {
           variants={fadeInUp}
           className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 md:mb-4 lg:mb-6 text-black leading-tight font-playfair"
         >
-          Patient Reviews
+          Patient Feedback
         </motion.h2>
 
         <motion.div 
@@ -86,7 +86,7 @@ const PatientReviews = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={subtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="block text-lg md:text-xl lg:text-2xl mt-1"
+            className="block text-lg md:text-xl mb-10 lg:text-2xl mt-1"
           >
             M.B.B.S., M.D. (Pediatrics), Pediatrician & Neonatologist
           </motion.span>

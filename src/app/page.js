@@ -68,11 +68,11 @@ export default function Home() {
   <div className="">
     <HeroSection/>
     <hr className="text-[#1018281f]"/>
+    <DoctorProfileSection/>
+    <hr className="text-[#1018281f]"/>
     <AboutMayur/>
     <hr className="text-[#1018281f]"/>
     <PediatricTherapySection/>
-    <hr className="text-[#1018281f]"/>
-    <DoctorProfileSection/>
     <hr className="text-[#1018281f]"/>
     <PatientReviews/>
     <hr className="text-[#1018281f]"/>

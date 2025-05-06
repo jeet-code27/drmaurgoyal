@@ -52,20 +52,55 @@ const Navbar = () => {
     {
       title: "Services",
       href: "/services",
+      dropdownItems: [
+        { 
+          title: "General Pediatrics OPD", 
+          href: "/services/general-pediatrics-opd",
+        },
+        { 
+          title: "Pediatric Emergency Services", 
+          href: "/services/pediatrics-emergency-services",
+        },
+        { 
+          title: "Pediatric Critical Care", 
+          href: "/services/pediatric-critical-care",
+        },
+        { 
+          title: "Neonatology Services", 
+          href: "/services/neonatology-services",
+        },
+        { 
+          title: "Vaccination Programs", 
+          href: "/services/vacination-programs",
+        },
+        { 
+          title: "Adolescent Health Services", 
+          href: "/services/adolescent-health-services",
+        },
+        { 
+          title: "Support Services", 
+          href: "/services/support-services",
+        },
+        
+
+      ]
     },
     {
       title: "Resources",
       href: "/resources",
       dropdownItems: [
-        { title: "Blog", description: "Articles and information for parents", href: "/blog" },
         { title: "FAQ", description: "Answers to common questions", href: "/faq" },
         { title: "Testimonials", description: "Stories of hope, healing, and happiness from our little patients and their parents", href: "/testimonials" },
-
       ]
     },
     {
-      title: "Newborn Care",
-      href: "/newborn-care",
+      title: "Parents Corner",
+      href: "/parents-corner",
+      dropdownItems: [
+        { title: "Newborn Care", description: "Essential information for new parents", href: "/newborn-care" },
+        { title: "Blogs", description: "Articles and information for parents", href: "/blog" },
+        { title: "Adolescent Care", description: "Guidance for teenage health and development", href: "/adolescent-care" },
+      ]
     },
     {
       title: "About",
@@ -107,10 +142,10 @@ const Navbar = () => {
       <nav ref={navbarRef} className="bg-gradient-to-r from-blue-50 to-teal-50 shadow-lg w-full sticky top-0 z-50 border-b-2 border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 md:h-20">
-            {/* Logo - MODIFIED: increased size, removed gradient background, fixed image format issues */}
+            {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="flex items-center">
-                <div className="h-20 w-20 md:h-26 md:w-26 relative">
+                <div className="h-16 w-16 md:h-20 md:w-20 relative">
                   <Image 
                     src="/images/mayurchildcare.png" 
                     alt="Mayur Child Care Center Logo" 
@@ -121,11 +156,10 @@ const Navbar = () => {
                     unoptimized={true}
                   />
                 </div>
-                <div className="">
+                <div className="ml-2">
                   <h2 className="text-lg md:text-xl font-bold bg-gradient-to-r from-[#00bcd4] via-[#9c27b0] to-[#e50087] bg-clip-text text-transparent">
                     Mayur Child Care Center
                   </h2>
-
                 </div>
               </Link>
             </div>
@@ -134,15 +168,14 @@ const Navbar = () => {
             <div className="hidden md:flex items-center space-x-1">
               {menuItems.map((item, index) => (
                 <div key={index} className="relative">
-                  {item.dropdownItems ? (
+                  {(item.title === "Parents Corner" || item.title === "Resources") && item.dropdownItems ? (
                     <button
                       onClick={() => toggleDropdown(index)}
                       className="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 focus:outline-none hover:bg-blue-50 rounded-full"
-                      aria-expanded={activeDropdown === index}
                     >
                       {item.title}
                       <ChevronDown 
-                        className={`ml-1 h-4 w-4 transition-transform duration-200 ${activeDropdown === index ? 'rotate-180 text-blue-600' : ''}`} 
+                        className={`ml-1 h-4 w-4 transition-transform duration-200 ${activeDropdown === index ? 'rotate-180 text-blue-600' : ''}`}
                       />
                     </button>
                   ) : (
@@ -151,6 +184,15 @@ const Navbar = () => {
                       className="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 focus:outline-none hover:bg-blue-50 rounded-full"
                     >
                       {item.title}
+                      {item.dropdownItems && item.title === "Services" && (
+                        <ChevronDown 
+                          className={`ml-1 h-4 w-4 transition-transform duration-200 ${activeDropdown === index ? 'rotate-180 text-blue-600' : ''}`}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            toggleDropdown(index);
+                          }}
+                        />
+                      )}
                     </Link>
                   )}
 
@@ -162,18 +204,20 @@ const Navbar = () => {
                         initial="hidden"
                         animate="visible"
                         exit="exit"
-                        className="absolute z-40 bg-white shadow-lg rounded-lg border border-gray-100 w-64 mt-1 right-0"
+                        className={`absolute z-40 bg-white shadow-lg rounded-lg border border-gray-100 mt-1 ${item.title === "Services" ? "w-72 right-0" : "w-64 right-0"}`}
                       >
                         <div className="py-2">
                           {item.dropdownItems.map((dropdownItem, idx) => (
                             <Link 
-                              key={idx} 
+                              key={idx}
                               href={dropdownItem.href}
                               className="block px-4 py-3 hover:bg-blue-50 transition-colors"
                               onClick={() => setActiveDropdown(null)}
                             >
                               <h3 className="text-sm font-medium text-gray-900">{dropdownItem.title}</h3>
-                              <p className="mt-1 text-xs text-gray-500">{dropdownItem.description}</p>
+                              {dropdownItem.description && (
+                                <p className="mt-1 text-xs text-gray-500">{dropdownItem.description}</p>
+                              )}
                             </Link>
                           ))}
                         </div>
@@ -190,7 +234,7 @@ const Navbar = () => {
                 href="/locations" 
                 className="px-4 py-2 rounded-full text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 text-sm"
               >
-                Location
+                Contact Us
               </Link>
               <Link 
                 href="/bookconsultation" 
@@ -223,56 +267,68 @@ const Navbar = () => {
               initial="closed"
               animate="open"
               exit="closed"
-              className="md:hidden overflow-hidden bg-white"
+              className="md:hidden overflow-hidden bg-white border-t border-gray-100"
             >
-              <div className="px-3 pt-2 pb-4 space-y-1 max-h-screen overflow-y-auto">
+              <div className="px-3 pt-2 pb-4 space-y-1 max-h-[80vh] overflow-y-auto">
                 {menuItems.map((item, index) => (
                   <div key={index} className="border-b border-gray-100 last:border-0">
-                    {item.dropdownItems ? (
-                      <>
-                        <button
-                          onClick={() => toggleDropdown(index)}
-                          className="w-full flex justify-between items-center px-3 py-3 text-gray-800 hover:bg-gray-50 rounded-md"
-                        >
-                          <span className="font-medium">{item.title}</span>
-                          <ChevronDown 
-                            className={`ml-1 h-5 w-5 transition-transform duration-200 ${activeDropdown === index ? 'rotate-180 text-blue-500' : ''}`} 
-                          />
-                        </button>
-                        
-                        <AnimatePresence>
-                          {activeDropdown === index && (
-                            <motion.div
-                              variants={dropdownVariants}
-                              initial="hidden"
-                              animate="visible"
-                              exit="exit"
-                              className="px-3 py-2 bg-gray-50 rounded-md mb-2"
-                            >
-                              {item.dropdownItems.map((dropdownItem, idx) => (
-                                <Link 
-                                  key={idx} 
-                                  href={dropdownItem.href}
-                                  className="block py-2 border-b border-gray-100 last:border-0 hover:bg-blue-50 px-3 rounded-md my-1"
-                                  onClick={() => setIsOpen(false)}
-                                >
-                                  <h3 className="text-sm font-medium text-gray-900">{dropdownItem.title}</h3>
-                                  <p className="mt-1 text-xs text-gray-500">{dropdownItem.description}</p>
-                                </Link>
-                              ))}
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </>
+                    {(item.title === "Parents Corner" || item.title === "Resources") && item.dropdownItems ? (
+                      <button
+                        onClick={() => toggleDropdown(index)}
+                        className="w-full flex justify-between items-center px-3 py-3 text-gray-800 hover:bg-gray-50 rounded-md font-medium"
+                      >
+                        <span>{item.title}</span>
+                        <ChevronDown 
+                          className={`ml-1 h-4 w-4 transition-transform duration-200 ${activeDropdown === index ? 'rotate-180 text-blue-500' : ''}`} 
+                        />
+                      </button>
                     ) : (
                       <Link
                         href={item.href}
-                        className="block px-3 py-3 text-gray-800 hover:bg-gray-50 rounded-md"
+                        className="block px-3 py-3 text-gray-800 hover:bg-gray-50 rounded-md font-medium"
                         onClick={() => setIsOpen(false)}
                       >
-                        <span className="font-medium">{item.title}</span>
+                        {item.title}
                       </Link>
                     )}
+                    
+                    {item.dropdownItems && item.title === "Services" && (
+                      <button
+                        onClick={() => toggleDropdown(index)}
+                        className="w-full flex justify-between items-center px-6 py-2 text-gray-600 hover:bg-gray-50 rounded-md"
+                      >
+                        <span className="text-sm">View options</span>
+                        <ChevronDown 
+                          className={`ml-1 h-4 w-4 transition-transform duration-200 ${activeDropdown === index ? 'rotate-180 text-blue-500' : ''}`} 
+                        />
+                      </button>
+                    )}
+                    
+                    <AnimatePresence>
+                      {activeDropdown === index && item.dropdownItems && (
+                        <motion.div
+                          variants={dropdownVariants}
+                          initial="hidden"
+                          animate="visible"
+                          exit="exit"
+                          className="px-3 py-2 bg-gray-50 rounded-md mb-2"
+                        >
+                          {item.dropdownItems.map((dropdownItem, idx) => (
+                            <Link 
+                              key={idx} 
+                              href={dropdownItem.href}
+                              className="block py-2 border-b border-gray-100 last:border-0 hover:bg-blue-50 px-3 rounded-md my-1"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              <h3 className="text-sm font-medium text-gray-900">{dropdownItem.title}</h3>
+                              {dropdownItem.description && (
+                                <p className="mt-1 text-xs text-gray-500">{dropdownItem.description}</p>
+                              )}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
                 ))}
                 
@@ -283,14 +339,14 @@ const Navbar = () => {
                     className="px-4 py-2 rounded-full text-gray-700 border border-gray-300 hover:bg-gray-50 text-center font-medium"
                     onClick={() => setIsOpen(false)}
                   >
-                    Locations
+                    Contact Us
                   </Link>
                   <Link
-                    href="/request"
+                    href="/bookconsultation"
                     className="px-4 py-2 rounded-full text-white bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 flex items-center justify-center shadow-md font-medium"
                     onClick={() => setIsOpen(false)}
                   >
-                    Request a visit
+                    Book Consultation
                     <ChevronRight className="h-4 w-4 ml-2" />
                   </Link>
                 </div>

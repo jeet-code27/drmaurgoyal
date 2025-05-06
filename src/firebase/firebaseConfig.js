@@ -4,19 +4,12 @@ import { getAnalytics } from 'firebase/analytics';
 
 // Firebase configuration
 const firebaseConfig = {
-//   apiKey: "AIzaSyD67pl8RAdt_t306GKS704bVqFHAR78zNE",
-//   authDomain: "boneandjoints-17da3.firebaseapp.com",
-//   projectId: "boneandjoints-17da3",
-//   storageBucket: "boneandjoints-17da3.firebasestorage.app",
-//   messagingSenderId: "447832340957",
-//   appId: "1:447832340957:web:fc926308e38cfc55459e34"
 apiKey: "AIzaSyAHaYMT_jYnLqrPnKyUnI4ES8VzmMw_3Vg",
 authDomain: "mayurchildcarecenter.firebaseapp.com",
 projectId: "mayurchildcarecenter",
 storageBucket: "mayurchildcarecenter.firebasestorage.app",
 messagingSenderId: "118324665230",
 appId: "1:118324665230:web:c58231174106937808e2df",
-// measurementId: "G-B5TFKW0V2V"
 };
 
 // Initialize Firebase only if it hasn't been initialized already

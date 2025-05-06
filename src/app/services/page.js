@@ -1,6 +1,7 @@
 import CarePartnerComponent from "@/components/CarePartnerComponent";
 import PediatricServices from "@/components/PediatricServices";
 import ServiceBoxes from "@/components/ServiceBox";
+import ServicesShowcase from "@/components/ServicesShowcase";
 
 export const metadata = {
     title: 'Best Pediatric Services in Ajmer | Dr. Mayur Kumar Goyal',
@@ -63,6 +64,7 @@ export default function Services() {
         <>
             <PediatricServices />
            <ServiceBoxes/>
+            <ServicesShowcase/>
            <CarePartnerComponent/>
         </>
     );
