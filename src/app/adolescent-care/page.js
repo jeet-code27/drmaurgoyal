@@ -104,7 +104,7 @@ const AdolescentCare = () => {
               <ul className="space-y-2 text-gray-700">
                 <li>✅ Guidance on parenting adolescents</li>
                 <li>✅ Help navigating challenging conversations</li>
-                <li>✅ Balanced involvement in your teen's care</li>
+                <li>✅ Balanced involvement in your teen&apos;s care</li>
                 <li>✅ Resources for supporting teen health</li>
               </ul>
             </div>

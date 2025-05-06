@@ -14,7 +14,7 @@ const SpecializedPediatrics = () => {
           Specialized Pediatric Departments
         </h1>
         <h2 className="text-xl text-blue-600 mb-6">
-          Expert Care for Every Aspect of Your Child's Health
+          Expert Care for Every Aspect of Your Child&apos;s Health
         </h2>
 
         <div className="bg-blue-50 p-4 rounded-lg mb-8">
@@ -125,7 +125,7 @@ const SpecializedPediatrics = () => {
         <div className="bg-blue-100 border-l-4 border-blue-500 p-4 rounded-r-lg">
           <p className="text-gray-800 font-medium">
             Our specialized pediatric teams work together to provide coordinated, 
-            compassionate care tailored to your child's unique needs.
+            compassionate care tailored to your child&apos;s unique needs.
           </p>
         </div>
       </div>

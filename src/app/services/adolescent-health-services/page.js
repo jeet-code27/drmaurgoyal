@@ -19,7 +19,7 @@ const AdolescentHealthServices = () => {
 
         <div className="bg-indigo-50 p-4 rounded-lg mb-8">
           <p className="text-gray-800">
-            Adolescence is a crucial time of growth and development, and we are committed to providing expert care and guidance for your teenager's unique health needs. Led by our experienced team of pediatricians, we offer specialized services to support your adolescent's physical, emotional, and mental well-being.
+            Adolescence is a crucial time of growth and development, and we are committed to providing expert care and guidance for your teenager&apos;s unique health needs. Led by our experienced team of pediatricians, we offer specialized services to support your adolescent&apos;s physical, emotional, and mental well-being.
           </p>
           <p className="text-gray-800 mt-4">
             From routine check-ups to addressing specific health concerns, our Adolescent Health Services are designed to empower young individuals to take charge of their health, now and in the years to come.
@@ -39,7 +39,7 @@ const AdolescentHealthServices = () => {
         </div>
 
         <div className="mb-8">
-          <h3 className="text-xl font-semibold text-indigo-800 mb-4">Why Choose Mayur Child Care Center for Your Teen's Health?</h3>
+          <h3 className="text-xl font-semibold text-indigo-800 mb-4">Why Choose Mayur Child Care Center for Your Teen&apos;s Health?</h3>
           <ul className="space-y-2 text-gray-700">
             <li>✅ Comprehensive care for both physical and mental health</li>
             <li>✅ Private, confidential consultations with caring pediatricians</li>

@@ -14,7 +14,7 @@ const GeneralPediatricsOPD = () => {
           General Pediatrics OPD
         </h1>
         <h2 className="text-xl text-blue-600 mb-6">
-          Caring for Your Child's Health, Every Step of the Way
+          Caring for Your Child&apos;s Health, Every Step of the Way
         </h2>
 
         <div className="bg-blue-50 p-4 rounded-lg mb-8">
@@ -25,7 +25,7 @@ const GeneralPediatricsOPD = () => {
 
         <div className="mb-8">
           <p className="text-gray-700 mb-6">
-            Whether it's a routine check-up, a minor illness, or developmental concerns, our OPD provides comprehensive evaluation, diagnosis, and treatment — all in a child-friendly environment where your little one feels safe and cared for.
+            Whether it&apos;s a routine check-up, a minor illness, or developmental concerns, our OPD provides comprehensive evaluation, diagnosis, and treatment — all in a child-friendly environment where your little one feels safe and cared for.
           </p>
 
           <h3 className="text-xl font-semibold text-blue-800 mb-4">We Offer:</h3>
@@ -41,7 +41,7 @@ const GeneralPediatricsOPD = () => {
 
         <div className="bg-blue-100 border-l-4 border-blue-500 p-4 rounded-r-lg">
           <p className="text-gray-800">
-            Because early care leads to a healthier future, trust us to be your partner in your child's health journey.
+            Because early care leads to a healthier future, trust us to be your partner in your child&apos;s health journey.
           </p>
         </div>
       </div>
