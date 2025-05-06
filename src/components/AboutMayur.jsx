@@ -65,7 +65,7 @@ export default function AboutMayur() {
       className="w-full flex flex-col items-center justify-center py-16 px-4 text-center bg-[#fcf9ff]"
     >
       {/* Logo container with fade up animation */}
-      <motion.div 
+      {/* <motion.div 
         className="mb-8"
         variants={itemVariants}
       >
@@ -76,7 +76,7 @@ export default function AboutMayur() {
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
-      </motion.div>
+      </motion.div> */}
       
       {/* Tagline with slide in animation */}
       <div className="w-full max-w-5xl">

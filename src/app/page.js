@@ -70,11 +70,11 @@ export default function Home() {
     <hr className="text-[#1018281f]"/>
     <DoctorProfileSection/>
     <hr className="text-[#1018281f]"/>
+    <PatientReviews/>
+    <hr className="text-[#1018281f]"/>
     <AboutMayur/>
     <hr className="text-[#1018281f]"/>
-    <PediatricTherapySection/>
-    <hr className="text-[#1018281f]"/>
-    <PatientReviews/>
+    <PediatricTherapySection/> 
     <hr className="text-[#1018281f]"/>
     <ImageGallerySlider/>
     <hr className="text-[#1018281f]"/>
