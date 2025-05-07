@@ -121,7 +121,7 @@ const HeroSection = () => {
               className="flex flex-col sm:flex-row gap-4 mt-8"
               variants={itemVariants}
             >
-              <Link href="/bookconsultation" passHref>
+              <Link href="https://drmayur.academichub.in/OnlineAppointment.aspx" target='_blank' passHref>
                 <motion.button 
                   className="bg-gradient-to-r from-[#00bcd4] via-[#9c27b0] to-[#e50087] hover:bg-teal-600 text-white font-medium py-3 px-8 rounded-full text-lg transition-colors"
                   variants={buttonHoverVariants}

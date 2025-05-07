@@ -116,7 +116,7 @@ const AboutDoctor = () => {
               </p>
             </motion.div>
 
-            <Link href="/bookconsultation">
+            <Link href="https://drmayur.academichub.in/OnlineAppointment.aspx" target='_blank'>
               <motion.div
                 ref={buttonRef}
                 initial={{ opacity: 0, y: 20 }}

@@ -101,7 +101,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/bookconsultation" className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-left justify-left group">
+                <Link href="https://drmayur.academichub.in/OnlineAppointment.aspx" target='_blank'  className="text-gray-300 hover:text-emerald-400 transition-colors duration-300 flex items-left justify-left group">
                   <span className="mr-2 text-emerald-400 group-hover:scale-125 transition-transform duration-300">•</span> Book Consultation
                 </Link>
               </li>

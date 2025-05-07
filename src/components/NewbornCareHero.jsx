@@ -103,7 +103,7 @@ const NewbornCareHero = () => {
               whileTap="tap"
             >
               <Link 
-                href="/bookconsultation"
+                href="https://drmayur.academichub.in/OnlineAppointment.aspx" target='_blank'
                 className="inline-block px-8 py-3 bg-white text-gray-800 font-medium rounded-full border border-gray-300 hover:bg-gray-100 transition-colors"
               >
                 Book a Consultation

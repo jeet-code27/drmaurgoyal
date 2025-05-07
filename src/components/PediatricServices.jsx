@@ -92,7 +92,7 @@ const PediatricServices = () => {
               whileTap="tap"
             >
               <Link 
-                href="/bookconsultation"
+                href="https://drmayur.academichub.in/OnlineAppointment.aspx" target='_blank'
                 className="inline-block px-8 py-3 bg-gray-800 text-white font-medium rounded-full hover:bg-gray-700 transition-colors"
               >
                 Book Consultation

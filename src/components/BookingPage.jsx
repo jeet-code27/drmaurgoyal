@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../firebase/firebaseConfig'; // Import Firestore instance
 import { collection, getDocs, addDoc, query, where } from 'firebase/firestore';
+import emailjs from 'emailjs-com';
 
 const BookingSystem = () => {
   // State management
@@ -21,6 +22,7 @@ const BookingSystem = () => {
   const [nameError, setNameError] = useState('');
   const [phoneError, setPhoneError] = useState('');
   const [emailError, setEmailError] = useState('');
+  
 
   // Check if we're on client side and set Firestore as ready
   useEffect(() => {
@@ -108,7 +110,6 @@ const BookingSystem = () => {
     }
   };
 
-  // Format time to 12-hour format with AM/PM
   const formatTime = (time24h) => {
     const [hours, minutes] = time24h.split(':');
     const hour = parseInt(hours);
@@ -117,7 +118,6 @@ const BookingSystem = () => {
     return `${hour12}:${minutes} ${ampm}`;
   };
 
-  // Generate time slots in 15-minute intervals
   const generateTimeSlots = (startTime, endTime) => {
     const slots = [];
     let current = new Date(`2000-01-01T${startTime}:00`);
@@ -128,21 +128,16 @@ const BookingSystem = () => {
       const minutes = current.getMinutes().toString().padStart(2, '0');
       const timeSlot = `${hours}:${minutes}`;
       slots.push(timeSlot);
-      
-      // Add 15 minutes
       current.setMinutes(current.getMinutes() + 15);
     }
     
     return slots;
   };
 
-  // Update available time slots based on date
   useEffect(() => {
     if (selectedDate && firestoreReady) {
       const date = new Date(selectedDate);
       const dayOfWeek = date.getDay();
-
-      // Check if the selected day is closed
       const hours = consultationHours[dayOfWeek];
       
       if (hours.isClosed) {
@@ -169,24 +164,20 @@ const BookingSystem = () => {
     }
   }, [selectedDate, firestoreReady]);
 
-  // Get minimum date (2 days from now)
   const getMinDate = () => {
     const today = new Date();
     const minDate = new Date(today);
-    minDate.setDate(today.getDate() + 1); // At least one days in advance
+    minDate.setDate(today.getDate() + 1);
     return minDate.toISOString().split('T')[0];
   };
 
-  // Get consultation location based on date
   const getConsultationLocation = () => {
     if (!selectedDate) return '';
-    
     const date = new Date(selectedDate);
     const dayOfWeek = date.getDay();
     return consultationHours[dayOfWeek].location;
   };
 
-  // Validation functions
   const validateName = (name) => {
     if (!name.trim()) {
       setNameError('Full Name is required');
@@ -226,7 +217,6 @@ const BookingSystem = () => {
     return true;
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -250,7 +240,6 @@ const BookingSystem = () => {
       return;
     }
     
-    // Validate personal information
     const isNameValid = validateName(fullName);
     const isPhoneValid = validatePhone(phoneNumber);
     const isEmailValid = validateEmail(email);
@@ -263,7 +252,7 @@ const BookingSystem = () => {
     setErrorMessage('');
     
     try {
-      // Add booking to Firestore with a status field
+      // Add booking to Firestore
       await addDoc(collection(db, "bookings"), {
         date: selectedDate,
         timeSlot: selectedSlot,
@@ -272,9 +261,32 @@ const BookingSystem = () => {
         email,
         location: getConsultationLocation(),
         createdAt: new Date().toISOString(),
-        status: "pending" // Add the status field with a default value
+        status: "pending"
       });
-      
+
+      // Send notification to doctor
+      const doctorTemplateParams = {
+        patient_name: fullName,
+        patient_email: email,
+        patient_phone: phoneNumber,
+        date: new Date(selectedDate).toLocaleDateString('en-US', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        }),
+        time: formatTime(selectedSlot),
+        location: getConsultationLocation(),
+        booking_time: new Date().toLocaleString()
+      };
+
+      await emailjs.send(
+        "service_f5ckvgd",
+        "template_8pdo1bd",
+        doctorTemplateParams,
+        "_6LHHFd3x8j6eCvUj"
+      );
+
       // Reset form
       setSelectedSlot('');
       setFullName('');
@@ -282,21 +294,18 @@ const BookingSystem = () => {
       setEmail('');
       setMessage("Booking successful! We will send a confirmation to your email shortly. Please arrive 15 minutes before your scheduled appointment time.");
       
-      // Scroll to the top to show the success message
       window.scrollTo(0, 0);
-      
-      // Refresh booked slots
       fetchBookedSlots(selectedDate);
     } catch (error) {
-      console.error("Error adding booking:", error);
-      setErrorMessage("Failed to book appointment. Please try again.");
+      console.error("Error adding booking or sending email:", error);
+      setErrorMessage("Booking was successful but we encountered an issue notifying the doctor. Please contact the clinic directly to verify your appointment.");
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-4  sm:p-6 bg-white rounded-lg shadow-lg text-teal-500">
+    <div className="max-w-4xl mx-auto p-4 sm:p-6 bg-white rounded-lg shadow-lg text-teal-500">
       <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-teal-700">Book Your Consultation with Dr. Mayur Kumar Goyal</h1>
       
       {!firestoreReady && (
@@ -322,18 +331,13 @@ const BookingSystem = () => {
         <ul className="list-disc pl-5 space-y-1">
           <li>Please arrive 15 minutes before your scheduled appointment</li>
           <li>Bring any previous medical reports or immunization records</li>
-          <li>A confirmation email will be sent within 24 hours of booking</li>
+          <li>The doctor will be notified immediately</li>
           <li>Rescheduling requires at least 24 hours notice</li>
           <li>Consultation duration is approximately 15-20 minutes</li>
-          <li>Please enter a valid email to receive a confirmation email.</li>
         </ul>
       </div>
       
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Hospital Information */}
-       
-        
-        {/* Date Selection */}
         <div className='w-[50%] lg:w-[40%]'>
           <label className="block text-[red] font-bold mb-2">
            Please Select Date for Your Consultation*
@@ -348,7 +352,6 @@ const BookingSystem = () => {
           />
         </div>
         
-        {/* Time Slot Selection */}
         {selectedDate && availableSlots.length > 0 && (
           <div>
             <label className="block text-black font-bold mb-2">
@@ -386,7 +389,6 @@ const BookingSystem = () => {
           </div>
         )}
         
-        {/* Personal Information */}
         {selectedSlot && selectedSlot !== 'Closed' && (
           <div className="space-y-4">
             <div className="p-4 bg-yellow-100 border border-yellow-200 text-yellow-800 rounded-md mb-4">
@@ -399,7 +401,6 @@ const BookingSystem = () => {
               <p className="text-sm mt-1">{getConsultationLocation()}</p>
             </div>
             
-            {/* Full Name Input */}
             <div>
               <label className="block text-black font-bold mb-2">
                 Full Name*
@@ -408,17 +409,16 @@ const BookingSystem = () => {
                 type="text"
                 value={fullName}
                 onChange={(e) => {
-                  const value = e.target.value.replace(/[^a-zA-Z\s]/g, ''); // Allow only letters and spaces
+                  const value = e.target.value.replace(/[^a-zA-Z\s]/g, '');
                   setFullName(value);
                   validateName(value);
                 }}
                 className="shadow border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               />
-              {nameError && <p className="text-red-200 text-sm mt-1">{nameError}</p>}
+              {nameError && <p className="text-red-500 text-sm mt-1">{nameError}</p>}
             </div>
             
-            {/* Phone Number Input */}
             <div>
               <label className="block text-black font-bold mb-2">
                 Phone Number*
@@ -427,16 +427,16 @@ const BookingSystem = () => {
                 type="tel"
                 value={phoneNumber}
                 onChange={(e) => {
-                  const value = e.target.value.replace(/\D/g, ''); // Allow only digits
+                  const value = e.target.value.replace(/\D/g, '');
                   setPhoneNumber(value);
                   validatePhone(value);
                 }}
                 className="shadow border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="e.g. 9876543210"
-                maxLength="10" // Limit to 10 digits
+                maxLength="10"
                 required
               />
-              {phoneError && <p className="text-red-200 text-sm mt-1">{phoneError}</p>}
+              {phoneError && <p className="text-red-500 text-sm mt-1">{phoneError}</p>}
             </div>
             
             <div>
@@ -446,7 +446,7 @@ const BookingSystem = () => {
               <input
                 type="email"
                 value={email}
-                placeholder='Please enter a valid email to receive a confirmation email.'
+                placeholder='Please enter a valid email'
                 onChange={(e) => {
                   setEmail(e.target.value);
                   validateEmail(e.target.value);
@@ -454,7 +454,7 @@ const BookingSystem = () => {
                 className="shadow border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               />
-              {emailError && <p className="text-red-200 text-sm mt-1">{emailError}</p>}
+              {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
             </div>
             
             <button
@@ -468,24 +468,13 @@ const BookingSystem = () => {
             >
               {isLoading ? 'Processing...' : 'Confirm Appointment'}
             </button>
-            
-            <p className="text-center text-sm text-black mt-2">
-              You will receive a confirmation via SMS and email.
-            </p>
           </div>
         )}
-         <div className="p-4 bg-gradient-to-r from-blue-100 to-teal-100 bg-opacity-20 rounded-md text-teal-800">
+        
+        <div className="p-4 bg-gradient-to-r from-blue-100 to-teal-100 bg-opacity-20 rounded-md text-teal-800">
           <h3 className="font-bold text-lg mb-2 text-teal-800">Mayur Child Care Center</h3>
           <p className="mb-1">B 15, Aravali Vihar, Near Lions Club, Vaishali Nagar, Ajmer</p>
           <p className="mb-1">Phone: 8955966990</p>
-          {/* <p className="mb-1">Email: mayurchildrenhospital@gmail.com</p>
-          <div className="mt-2">
-            <h4 className="font-bold">Hours of Operation:</h4>
-            <p>Monday - Saturday:</p>
-            <p className="ml-4">Schedule-1: 9:00 AM - 10:00 AM</p>
-            <p className="ml-4">Schedule-2: 5:00 PM - 8:00 PM</p>
-            <p>Sunday: 11:00 AM - 1:00 PM</p>
-          </div> */}
         </div>
       </form>
     </div>

@@ -70,7 +70,7 @@ export default function LocationMayur() {
                 <span className="mx-2">›</span>
                 <span>Ajmer</span>
               </div>
-              <h2 className="text-3xl font-bold text-gray-800">Mayur Children Hospital</h2>
+              <h2 className="text-3xl font-bold text-gray-800">Mayur Child Care Center</h2>
             </div>
           </motion.div>
 

@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         <main>{children}</main>
-        {/* <FloatingContact/> */}
+        <FloatingContact/>
         <Footer />
       </body>
     </html>
