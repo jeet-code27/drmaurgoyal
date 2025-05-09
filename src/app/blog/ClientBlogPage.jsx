@@ -195,7 +195,7 @@ const ClientBlogPage = ({ blogs }) => {
                 </div>
                 <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                   <Link href={`/blog/${blog.slug}`}>
-                    {blog.title}
+                    {blog.heading}
                   </Link>
                 </h2>
                 <p className="text-gray-700 mb-5 line-clamp-3">

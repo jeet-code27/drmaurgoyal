@@ -175,7 +175,7 @@ export default async function SingleBlogPage({ params }) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-70 rounded-lg"></div>
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12">
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-2 drop-shadow-md">{blog.title}</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-2 drop-shadow-md">{blog.heading}</h1>
         </div>
       </div>
       
